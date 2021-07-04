@@ -1,0 +1,64 @@
+// цвета для текущего проекта
+$color_primary: #209e53;
+$color_secondary: #da251d;
+
+$color_black: #2f3239;
+$color_white: #fff;
+$color_grey: #bdc2d3;
+$color_greyDark: #505058;
+$color_TankGrey: #41414d;
+$color_silver: #dadde9;
+$color_lightGrey: #8c8f98;
+$color_DimGray: #c4c4c4;
+$color_athensGray: #f4f4f5;
+
+$color-border-primary: #0a7e39;
+$color-border-secondary: $color_white;
+$color-border-tertiary: #6d6d7b;
+$color-border-quaternary: #148b44;
+
+// Ширины
+
+$screen-xs: 0;
+$screen-480: 480px;
+$screen-768: 768px;
+$screen-1024: 1024px;
+$screen-1280: 1280px;
+$screen-1400: 1400px;
+$screen-1680: 1560px;
+
+$container-sm: 100%;
+//$container-md:                648px;
+$container-md: ($screen-768 - 120px);
+//$container-lg:                864px;
+$container-lg: ($screen-1024 - 160px);
+//$container-xl:                1080px;
+$container-xl: ($screen-1280 - 200px);
+//$container-xxl:               1160px;
+$container-xxl: ($screen-1400 - 240px);
+//$container-xxxl:              1280px;
+$container-xxxl: ($screen-1680 - 320px);
+
+//fonts variables
+
+$font-size-base: 16px;
+$font-size-xxs: 15px;
+$font-size-xs: 18px;
+$font-size-s: 19px;
+$font-size-m: 20px;
+$font-size-l: 22px;
+$font-size-xl: 24px;
+$h1: 48px;
+$h2: 36px;
+$h3: 14px;
+$h4: 16px;
+
+$font-size-base-mob: 14px;
+$font-size-xxs-mob: 15px;
+$font-size-xs-mob: 16px;
+$font-size-s-mob: 17px;
+$font-size-m-mob: 18px;
+$h1-mob: 30px;
+$h2-mob: 30px;
+$h3-mob: 14px;
+$h4-mob: 20px;

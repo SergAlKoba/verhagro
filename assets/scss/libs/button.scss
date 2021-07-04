@@ -1,0 +1,231 @@
+.button {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0 10px;
+  min-width: 190px;
+  height: 45px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: $color_white;
+  background-color: $color_primary;
+  border: 2px solid $color_primary;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  user-select: none;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $color_primary;
+    background-color: inherit;
+  }
+}
+
+.button--arrow {
+  padding: 0 30px 0 10px;
+  min-width: 249px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 17px;
+    height: 14px;
+    background-image: url(../img/arrow.svg);
+    transition: all 0.5s linear;
+    transform: translate(0, -50%);
+  }
+  &:hover::after {
+    background-image: url(../img/arrow-green.svg);
+  }
+}
+
+.button--border {
+  min-width: 167px;
+  color: $color_primary;
+  background-color: inherit;
+  border-color: $color_primary;
+
+  &:hover {
+    color: $color_white;
+    background-color: $color_primary;
+  }
+}
+
+.button--inverse {
+  min-width: 249px;
+  height: 50px;
+  background-color: inherit;
+  border-color: $color_white;
+  @include font-primary( $font-size-xs-mob, $color_white, 400 );
+
+  &:hover {
+    color: $color_white;
+    background-color: $color_primary;
+  }
+
+  &.button--arrow:hover::after {
+    background-image: url(../img/arrow.svg);
+  }
+}
+
+.button--red {
+  color: $color_white;
+  background-color: $color_secondary;
+  border-color: $color_secondary;
+  &:hover {
+    color: $color_secondary;
+  }
+}
+
+.slick-action {
+  display: none;
+}
+
+.active.slick-action {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 35px;
+  width: fit-content;
+  display: block;
+  @media (min-width: 1024px) {
+    margin: 0 0 0 auto;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  font-size: 0;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  border: 1px solid $color_grey;
+  border-radius: 50%;
+  transition: all 0.5s linear;
+  transform: translate(0, -50%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 11px;
+  }
+  &:hover {
+    background-color: $color_grey;
+  }
+}
+
+.slick-prev {
+  top: 50%;
+  &:before {
+    top: 50%;
+    left: 50%;
+    background-image: url(../img/arrow-left.svg);
+    transform: translate(-67%, -50%);
+  }
+  &:hover::before {
+    background-image: url(../img/arrow-right-white.svg);
+  }
+}
+
+.slick-next {
+  right: 0;
+  left: auto;
+  &:before {
+    top: 50%;
+    left: 50%;
+    background-image: url(../img/arrow-right.svg);
+    transform: translate(-30%, -50%);
+  }
+  &:hover::before {
+    background-image: url(../img/arrow-left-white.svg);
+  }
+}
+
+.slick-dots {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+
+  li {
+    position: relative;
+    margin: 4px 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+    }
+
+    button {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      background-color: $color_secondary;
+      border: none;
+      border-radius: 50%;
+    }
+  }
+
+  .slick-active {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* ToTop Button */
+.ui-to-top {
+  position: fixed;
+  z-index: 1;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_primary;
+  transform: rotate(45deg);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: center / contain no-repeat url(../img/arrow-top.svg);
+    transform: rotate(-45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    border: 2px solid $color_primary;
+  }
+}
+
+.ui-to-top:hover {
+  background: #ed6a5a;
+}
+@media (min-width: 480px) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+}

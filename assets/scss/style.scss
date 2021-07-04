@@ -1,0 +1,106 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'libs/button';
+@import 'libs/header';
+@import 'libs/footer';
+@import 'libs/form';
+@import 'libs/fonts';
+@import 'libs/popups';
+@import 'libs/animation';
+@import 'libs/normalize.scss';
+
+.page {
+  position: relative;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  @include font-primary( $font-size-base-mob, $color_black, normal, 19px );
+  text-decoration: none;
+  outline: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: 1400px) {
+    @include font-primary( $font-size-base, $color_black, normal, 20px );
+  }
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 1290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  @media (min-width: 1024px) {
+    margin-top: 0 !important;
+  }
+}
+
+a {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  @include font-primary( $h1, $color_black, bold, 56px );
+  text-transform: uppercase;
+  @media (min-width: 1024px) {
+    @include font-primary( $h1-mob );
+  }
+}
+
+h2 {
+  @include font-primary( $h2-mob, $color_black, 500, 42px );
+  text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    @include font-primary( $h2 );
+  }
+}
+
+h3 {
+}
+
+h4 {
+  @include font-primary( $h4, $color_black, 500, 22px );
+
+  @media (min-width: 1024px) {
+    @include font-primary( $h4-mob, $color_black, 500, 18px );
+  }
+}
+
+h5 {
+}

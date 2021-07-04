@@ -1,0 +1,50 @@
+@mixin container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px;
+  width: 100%;
+
+  @media (min-width: $screen-480) {
+    width: $container-sm;
+  }
+
+  @media (min-width: $screen-768) {
+    padding: 0;
+    width: $container-md;
+  }
+
+  @media (min-width: $screen-1024) {
+    width: $container-lg;
+  }
+
+  @media (min-width: $screen-1280) {
+    width: $container-xl;
+  }
+
+  @media (min-width: $screen-1400) {
+    width: $container-xxl;
+  }
+
+  @media (min-width: $screen-1680) {
+    width: $container-xxxl;
+  }
+}
+
+@mixin font-primary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
+  font-family: Roboto, sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $style {
+    font-style: $style;
+  }
+}

@@ -1,0 +1,235 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: $color_greyDark;
+
+  &__inner {
+    position: relative;
+    @include container;
+    padding: 0 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100vw;
+      height: 1px;
+      background-color: $color_TankGrey;
+      transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 0 20px;
+    }
+
+    @media (min-width: 1680px) {
+      padding: 0 120px 15px 7px;
+    }
+  }
+
+  &__wraper {
+    @include container;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @media (min-width: 1680px) {
+      margin-top: 0;
+      padding-left: 8px;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+    width: 140px;
+    @media (min-width: 768px) {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__navigation {
+    @media (min-width: 480px) {
+      padding-right: 20px;
+      width: 50%;
+    }
+    @media (min-width: 1024px) {
+      width: auto;
+      min-width: 412px;
+    }
+  }
+
+  &__text {
+    margin-top: 17px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    @include font-primary( $font-size-base-mob, $color_white );
+
+    @media (min-width: 768px) {
+      margin: 0;
+      padding: 0 20px;
+      width: auto;
+    }
+
+    @media (min-width: 1024px) {
+      @include font-primary( 15px, $color_white );
+    }
+  }
+
+  &__social-wraper {
+    margin: 27px auto 0;
+    display: flex;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__social-icon {
+    @media (min-width: 1024px) {
+    }
+
+    &:hover {
+      fill: #626262;
+    }
+  }
+
+  &__social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color_white;
+
+    &:hover {
+      background-color: $color_primary;
+      border-color: $color_primary;
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+    }
+  }
+
+  &__subtitle {
+    @include font-primary( $font-size-base, $color_white, 500 );
+    &:hover {
+      color: $color_primary;
+    }
+    @media (min-width: 1024px) {
+      @include font-primary( $font-size-base, $color_white, 500 );
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__item {
+    @media (min-width: 1400px) {
+    }
+
+    &-link {
+      @include font-primary( 14px, $color_white, 400, 19.6px );
+      &:hover {
+        color: $color_primary;
+      }
+      @media (min-width: 1024px) {
+        @include font-primary( 15px, $color_white );
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1680px) {
+      margin-left: 87px;
+      .footer__block {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__contacts-link {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 30px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    @include font-primary( $font-size-base-mob, $color_white);
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:first-child::before {
+      width: 17px;
+      height: 15px;
+      background: no-repeat url(../img/mail.svg);
+    }
+
+    &:nth-of-type(2)::before,
+    &:nth-of-type(3)::before {
+      width: 15px;
+      height: 15px;
+      background: no-repeat url(../img/telephone.svg);
+    }
+  }
+
+  &__contacts-address {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 30px;
+    display: block;
+    @include font-primary( $font-size-base-mob, $color_white);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 19px;
+      background: no-repeat url(../img/mark.svg);
+    }
+  }
+}
