@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+  <link rel="stylesheet" href="css/erore.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+  <!-- Основной контент -->
+
+  <div class="wrapper" id="wrapper">
+    <!-- Popup -->
+    <include src="assets/templates/popup.html"></include>
+
+    <!-- Header -->
+    <include src="assets/templates/header.html"></include>
+
+    <main class="main" id="main">
+
+      <!-- Секция ошибка 404 -->
+      <section class="error fadeInUp wow">
+        <div class="error__inner">
+          <div class="error__image">
+            <img alt="" src="img/404.jpg">
+          </div>
+          <h1 class="error__title">ошибка</h1>
+          <p class="error__content">
+            Страница, которую вы ищите, не существует либо устарела.
+          </p>
+          <div class="error__action">
+            <p class="error__content">Вы можете вернуться <a href="javascript:history.back();"
+                class="error__link">назад</a></p>
+            <p class="error__content">
+              либо перейти на
+              <a href="index.html" class="error__link"> главную</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <include src="assets/templates/footer.html"></include>
+
+  </div>
+
+  <!-- Скрипты -->
+  <script src="js/core.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

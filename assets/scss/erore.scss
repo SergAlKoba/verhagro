@@ -1,0 +1,71 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+
+.error {
+  &__inner {
+    position: relative;
+    @include container;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: top/contain no-repeat url(../img/bg-mobile-404.png);
+    }
+    @media (min-width: 768px) {
+      padding: 40px 0 100px;
+      &::before {
+        background: top/contain no-repeat url(../img/bg-404.png);
+      }
+    }
+    @media (min-width: 1680px) {
+      padding: 40px 0 211px;
+      &::before {
+        top: 58px;
+        left: 57px;
+        width: 94%;
+      }
+    }
+  }
+
+  &__image {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-top: 34px;
+    margin-bottom: 5px;
+    @include font-primary( 30px, $color_black, 400, 36px );
+    @media (min-width: 1280px) {
+      margin-top: 37px;
+      margin-bottom: 18px;
+      @include font-primary( 40px, $color_black, 400, 47px );
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 0 35px;
+    text-align: center;
+    @media (min-width: 1280px) {
+      padding: 0;
+      display: inline;
+      @include font-primary( 18px, $color_black, 400, 23px );
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $color_primary;
+  }
+}

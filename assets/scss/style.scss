@@ -15,6 +15,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: #f4f4f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color_primary;
+    transition: all .5s;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f4f4f5;
+  }
+  &.hidden {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 * {
@@ -55,6 +70,7 @@
 }
 
 .main {
+  flex: 1 0 auto;
   @media (min-width: 1024px) {
     margin-top: 0 !important;
   }
@@ -75,10 +91,10 @@ section {
 }
 
 h1 {
-  @include font-primary( $h1, $color_black, bold, 56px );
+  @include font-primary( $h1-mob, $color_black, bold, 30px );
   text-transform: uppercase;
   @media (min-width: 1024px) {
-    @include font-primary( $h1-mob );
+    @include font-primary( $h1, $color_black, bold, 56px );
   }
 }
 
@@ -92,13 +108,14 @@ h2 {
 }
 
 h3 {
+  @include font-primary( $h3, $color_black, 500, 39px );
 }
 
 h4 {
-  @include font-primary( $h4, $color_black, 500, 22px );
+  @include font-primary( $h4-mob, $color_black, 500, 22px );
 
   @media (min-width: 1024px) {
-    @include font-primary( $h4-mob, $color_black, 500, 18px );
+    @include font-primary( $h4, $color_black, 500, 18px );
   }
 }
 

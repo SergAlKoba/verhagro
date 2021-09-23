@@ -12,102 +12,43 @@
 </head>
 
 
-<body class="page header-simple">
+<body class="page">
 
   <!-- Основной контент -->
 
   <div class="wrapper" id="wrapper">
     <!-- Popup -->
-    <div class="modal modal__application">
-  <div class="modal__inner">
-    <span class="modal__close close"></span>
-    <h4 class="modal__title">Обратный звонок</h4>
-    <span class="modal__description">Мы перезвоним в ближайшее время</span>
-    <form class="modal__form form">
-      <div class="modal__form-row form-row">
-        <div class="modal__form-column form-column">
-          <!-- за включение border ошибки отвечает класс .error для form__input-->
-          <label>Ваше имя</label>
-          <input class="modal__input form__input" required="" type="text" placeholder="Ваше имя">
-          <span class="error__text">Ошибка</span>
-        </div>
-        <div class="modal__form-column form-column">
-          <!-- за включение border ошибки отвечает класс .error для form__input-->
-          <label>Ваш телефон</label>
-          <input class="modal__input form__input only_number" required="" type="text" placeholder="38(123) ___ __ __">
-          <span class="error__text">Ошибка</span>
-        </div>
-      </div>
-      <div class="modal__action">
-        <button class="button modal__button inform">Заказать звонок</button>
-      </div>
-    </form>
-  </div>
-</div>
+    <!-- popup review -->
 
-<!-- popup inform -->
-
-<div class="modal modal__inform">
-  <div class="modal__inner">
-    <span class="modal__close close"></span>
-    <h4 class="modal__title">Спасибо за заявку!</h4>
-    <span class="modal__description">Мы свяжемся с Вами в ближайшее время</span>
-    <div class="modal__action">
-      <button class="button modal__button finish">Закрыть</button>
+<div class="modal modal__review">
+  <div class="inner">
+    <span class="close"></span>
+    <div class="heading">
+      <h4 class="title">Вы можете оставить отзыв</h4>
+      <p>Используйте данную форму для того, чтобы оставить отзыв</p>
+      <span class="description">Комментарий будет выведен только после предварительной проверки нашими
+        сотрудниками.</span>
     </div>
-  </div>
-</div>
-
-<!-- popup log-in -->
-
-<div class="modal modal__log-in">
-  <div class="modal__inner">
-    <h4 class="modal__title">Вход</h4>
-    <form class="modal__form form">
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Почта</label>
-      <input class="modal__input form__input" required="" type="text" placeholder="почта@example.com">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль</label>
-      <input class="modal__input form__input" required="" type="password" placeholder="Введите пароль">
-      <span class="error__text">Ошибка</span>
-      <div class="modal__action">
-        <button class="button modal__button button">Войти</button>
-        <a href="javascript:void(0);" class="modal__link">Забыли пароль?</a>
+    <form class="form">
+      <div class="form__row">
+        <div class="form__column">
+          <!-- за включение border ошибки отвечает класс .error для form__input-->
+          <label class="label">Ваше имя</label>
+          <input class="input form__input" required="" type="text">
+          <span class="error__text">Ошибка</span>
+        </div>
+        <div class="form__column">
+          <!-- за включение border ошибки отвечает класс .error для form__input-->
+          <label class="modal__label">E-mail</label>
+          <input class="input form__input" required="" type="text">
+          <span class="error__text">Ошибка</span>
+        </div>
       </div>
-    </form>
-  </div>
-</div>
-
-<!-- popup registration -->
-
-<div class="modal modal__registration">
-  <div class="modal__inner">
-    <h4 class="modal__title">Регистрация</h4>
-    <form class="modal__form form">
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Имя</label>
-      <input class="modal__input form__input" required="" type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Телефон</label>
-      <input class="modal__input form__input only_number" required="" type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Почта</label>
-      <input class="modal__input form__input" required="" type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль</label>
-      <input class="modal__input form__input" required="" type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль еще раз</label>
-      <input class="modal__input form__input" required="" type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
+      <label class="label">Текст сообщения</label>
+      <textarea></textarea>
       <div class="modal__action">
-        <button class="button modal__button">Зарегистрироваться</button>
+        <!-- класс finish отвечает за закрытие попапа при нажатии-->
+        <button class="button finish">Отправить</button>
       </div>
     </form>
   </div>
@@ -175,6 +116,7 @@
           <span class="header__authorized-mail">alex@gmail.com</span>
         </div>
       </div> -->
+
     </div>
     <div class="header__inner">
       <form class="header__search">
@@ -189,8 +131,8 @@
         <img src="img/Logo.png" class="header__logo-image" alt="logo">
       </a>
       <div class="header__basket">
-        <a href="#" class="header__basket-icon">
-          <span class="header__basket-total">14 000</span>
+        <a href="basket.html" class="header__basket-icon">
+          <!-- <span class="header__basket-total">14 000</span> -->
           <span class="header__basket-count">2</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23" fill="none">
             <path d="M6.98351 15.9761H7.77877H21.338C21.6656 15.9761 21.9543 15.7609 22.0478 15.4469L24.9692 5.63788C25.0359 5.41375 24.9929 5.17127 24.8531 4.98377C24.7133 4.79627 24.4932 4.68582 24.2594 4.68582H5.40963L4.41295 1.33914C4.31944 1.02517 4.03072 0.809937 3.70308 0.809937H0.740675C0.331641 0.809888 0 1.14148 0 1.55056C0 1.9596 0.331641 2.29124 0.740675 2.29124H3.15088L4.14283 5.62186C4.14586 5.63285 4.14903 5.64373 4.15255 5.65448L6.78761 14.5022C5.28351 14.6034 4.09049 15.8586 4.09049 17.3879C4.09049 18.9831 5.38829 20.2809 6.98346 20.2809H7.71876C8.0401 21.3826 9.05847 22.1902 10.2626 22.1902C11.4666 22.1902 12.485 21.3827 12.8064 20.2809H16.7362C17.0575 21.3826 18.0759 22.1902 19.28 22.1902C20.484 22.1902 21.5024 21.3827 21.8238 20.2809H22.778C23.1871 20.2809 23.5187 19.9493 23.5187 19.5402C23.5187 19.1312 23.1871 18.7996 22.778 18.7996H21.8238C21.5024 17.6978 20.4841 16.8903 19.28 16.8903C18.0759 16.8903 17.0575 17.6978 16.7362 18.7996H12.8064C12.485 17.6978 11.4667 16.8903 10.2626 16.8903C9.05847 16.8903 8.04005 17.6978 7.71876 18.7996H6.98346C6.20504 18.7996 5.57179 18.1663 5.57179 17.3878C5.57179 16.6094 6.20509 15.9761 6.98351 15.9761ZM17.849 6.16708H23.266L22.2465 9.59028H17.849V6.16708ZM17.8489 11.0716H21.8053L20.7858 14.4948H17.8489V11.0716ZM12.3684 6.16708H16.3677V9.59028H12.3684V6.16708ZM12.3683 11.0716H16.3676V14.4948H12.3683V11.0716ZM10.8871 14.4948H8.33102L7.31154 11.0716H10.8871V14.4948ZM5.85089 6.16708H10.8871V9.59028H6.87037L5.85089 6.16708ZM19.28 18.3716C19.9244 18.3716 20.4486 18.8958 20.4486 19.5402C20.4486 20.1846 19.9244 20.7088 19.28 20.7088C18.6356 20.7088 18.1114 20.1846 18.1114 19.5402C18.1114 18.8958 18.6356 18.3716 19.28 18.3716ZM10.2626 18.3716C10.907 18.3716 11.4312 18.8958 11.4312 19.5402C11.4312 20.1846 10.907 20.7088 10.2626 20.7088C9.61823 20.7088 9.09401 20.1846 9.09401 19.5402C9.09401 18.8958 9.61823 18.3716 10.2626 18.3716Z" fill="#535C67"></path>
@@ -199,10 +141,10 @@
         <div class="header__basket-content">
           <ul>
             <li>
-              <a href="javascript:void(0);" class="header__basket-link">
+              <a href="basket.html" class="header__basket-link">
                 <img src="img/img-1.png" class="header__basket-image" alt="">
               </a>
-              <a href="javascript:void(0);" class="header__basket-text">
+              <a href="basket.html" class="header__basket-text">
                 Пресс-подборщик с константной камерой прессования Z562
               </a>
               <span class="header__basket-price">80 000 руб.</span>
@@ -214,10 +156,10 @@
               <span class="close"></span>
             </li>
             <li>
-              <a href="javascript:void(0);" class="header__basket-link">
+              <a href="basket.html" class="header__basket-link">
                 <img src="img/img-1.png" class="header__basket-image" alt="">
               </a>
-              <a href="javascript:void(0);" class="header__basket-text">
+              <a href="basket.html" class="header__basket-text">
                 Пресс-подборщик с константной камерой прессования Z562
               </a>
               <span class="header__basket-price">80 000 руб.</span>
@@ -244,112 +186,112 @@
     <div class="header__navigation" id="menu">
       <ul class="header__list">
         <li class="header__item">
-          <a href="javascript:void(0);" class="header__link">Техника</a>
+          <a href="technics.html" class="header__link">Техника</a>
           <ul class="sub-menu sub-menu-img">
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Косилки дисковые</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Ворошилки</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Грабли роторные</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Пресс-подборщики</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Обмотчики рулонов</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Прицепы для тюков</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Комбикормовый мини-завод</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Измельчители рулонов</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Миксера-кормораздатчики</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Фронтальные погрузчики</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Насадки</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Катки для трамбовки силоса</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Силосные вилы</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Дозатор-аппликатор для внесения консерванта</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Мульчирователь</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Гидравлическое плечо</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Щетка коммунальная</span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="technic-page.html">
                 <img src="img/img-1.png" alt="">
                 <span>Отвал для уборки снега</span>
               </a>
@@ -365,31 +307,31 @@
           </ul>
         </li>
         <li class="header__item">
-          <a href="" class="header__link">О компании</a>
+          <a href="about.html" class="header__link">О компании</a>
           <ul class="sub-menu">
-            <li><a href="">Отзывы</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Вопросы и ответы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="question.html">Вопросы и ответы</a></li>
           </ul>
         </li>
         <li class="header__item">
-          <a href="" class="header__link">Статьи</a>
+          <a href="#" class="header__link">Статьи</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__link">Каталоги</a>
+          <a href="catalogs.html" class="header__link">Каталоги</a>
         </li>
         <li class="header__item">
-          <a href="" class="header__link">Контакты</a>
+          <a href="contacts.html" class="header__link">Контакты</a>
         </li>
         <li class="header__item">
-          <a href="javascript:void(0);" class="header__link">Оплата и доставка</a>
+          <a href="delivery.html" class="header__link">Оплата и доставка</a>
           <ul class="sub-menu">
-            <li><a href="">Возврат товара</a></li>
-            <li><a href="">Гарантии</a></li>
+            <li><a href="#">Возврат товара</a></li>
+            <li><a href="#">Гарантии</a></li>
           </ul>
         </li>
       </ul>
-      <button class="header__navigation-button button button--red">Интернет-магазин запасных частей</button>
+      <a href="store.html" class="header__navigation-button button button--red">Интернет-магазин запасных частей</a>
     </div>
   </div>
 
@@ -474,7 +416,7 @@
       <section class="technics" id="technics">
         <div class="technics__container">
           <div class="technics__heading">
-            <h2 class="technics__heading-title fadeInUp wow">Сельскохозяйственная техника -</h2>
+            <h1 class="technics__heading-title fadeInUp wow">Сельскохозяйственная техника -</h1>
             <p class="technics__heading-subtitle fadeInUp wow">навозоразбрасыватели, культиваторы, прицепы</p>
           </div>
           <div class="technics__inner">
@@ -532,7 +474,7 @@
               клиентов. Наши клиенты ценят нас прежде всего за качество и профессионализм.
             </p>
           </div>
-          <div class="present__image-wrapper fadeInUp wow">
+          <div class="present__image-wrapper zoomIn wow">
             <img src="img/map.svg" class="present__image" alt="">
           </div>
         </div>
@@ -722,8 +664,8 @@
         </svg>
       </a>
       <a href="javascript:void(0);" class="footer__social-link" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" class="footer__social-icon" width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2602 0.7489C14.9455 0.933469 15.4859 1.47375 15.6703 2.15917C16.0131 3.41112 15.9999 6.02073 15.9999 6.02073C15.9999 6.02073 15.9999 8.61703 15.6705 9.8691C15.4859 10.5544 14.9456 11.0948 14.2602 11.2793C13.0081 11.6088 7.99997 11.6088 7.99997 11.6088C7.99997 11.6088 3.00487 11.6088 1.73974 11.2662C1.05432 11.0816 0.514036 10.5412 0.329466 9.85592C0 8.61703 0 6.00754 0 6.00754C0 6.00754 0 3.41112 0.329466 2.15917C0.513914 1.47387 1.0675 0.920286 1.73962 0.735838C2.99169 0.40625 7.99984 0.40625 7.99984 0.40625C7.99984 0.40625 13.0081 0.40625 14.2602 0.7489ZM10.5699 6.00752L6.40526 8.4062V3.60884L10.5699 6.00752Z" fill="white"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+          <path d="M14.92 8.128a1.069 1.069 0 00-.05-.103c-.26-.493-.758-1.098-1.492-1.815l-.016-.016-.007-.008-.008-.009h-.008a9.304 9.304 0 01-.633-.673c-.161-.22-.197-.44-.11-.666.063-.17.298-.528.704-1.075.213-.29.382-.523.507-.698C14.708 1.805 15.1 1 14.98.65l-.047-.082c-.03-.05-.112-.094-.242-.136a1.171 1.171 0 00-.5-.02l-2.249.016a.278.278 0 00-.156.004l-.102.025-.039.02-.03.025a.354.354 0 00-.087.087.572.572 0 00-.078.143 13.716 13.716 0 01-.835 1.848c-.193.34-.37.634-.532.883-.16.25-.296.433-.406.55a2.988 2.988 0 01-.296.284c-.089.071-.157.101-.203.09a5.502 5.502 0 01-.133-.033.537.537 0 01-.176-.201.936.936 0 01-.09-.32 3.706 3.706 0 01-.023-.727c.005-.17.008-.285.008-.345 0-.208.004-.434.011-.678l.02-.579c.005-.142.008-.293.008-.452 0-.158-.01-.283-.028-.373a1.325 1.325 0 00-.081-.263.437.437 0 00-.16-.197.878.878 0 00-.262-.111A4.95 4.95 0 007.216 0c-.968-.01-1.59.055-1.866.197a1.06 1.06 0 00-.297.247c-.094.12-.107.186-.04.197.313.049.535.167.665.353l.047.098c.036.072.073.198.11.378a4 4 0 01.07.6c.025.4.025.742 0 1.026-.027.285-.051.507-.075.666a1.384 1.384 0 01-.2.566.138.138 0 01-.038.041.56.56 0 01-.211.042c-.073 0-.161-.039-.266-.116a1.913 1.913 0 01-.324-.316 4.231 4.231 0 01-.378-.562 9.99 9.99 0 01-.438-.854l-.125-.239a20.95 20.95 0 01-.32-.669 13.25 13.25 0 01-.36-.85.54.54 0 00-.187-.263L2.944.518A.798.798 0 002.64.395L.5.412C.282.412.134.464.056.568L.023.617A.277.277 0 000 .748c0 .06.016.135.047.222a27.74 27.74 0 001.019 2.234c.367.717.686 1.295.957 1.733.27.438.546.851.828 1.24.28.389.467.638.558.747.091.11.163.192.215.247l.195.197c.125.131.308.289.55.472.243.184.51.364.805.542.294.178.637.323 1.027.435.39.113.77.158 1.14.136h.898c.183-.016.32-.077.414-.18l.031-.042a.56.56 0 00.059-.152.875.875 0 00.027-.225 2.841 2.841 0 01.051-.637c.039-.189.083-.331.133-.427a1.049 1.049 0 01.3-.361.499.499 0 01.063-.029c.125-.044.272-.001.441.127.17.13.328.288.477.477.148.189.327.4.535.636.208.236.39.41.546.526l.157.099c.104.065.24.126.406.18a.835.835 0 00.437.041l2-.032c.197 0 .351-.035.46-.103.11-.069.175-.144.195-.226a.669.669 0 00.004-.28 1.068 1.068 0 00-.055-.217z" fill="#fff"></path>
         </svg>
       </a>
     </div>
@@ -731,36 +673,36 @@
   <div class="footer__wraper">
     <nav class="footer__navigation">
       <div class="footer__block">
-        <a href="javascript:void(0);" class="footer__subtitle">Техника</a>
+        <a href="technics.html" class="footer__subtitle">Техника</a>
         <ul class="footer__list">
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Косилки дисковые</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Ворошилки</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Грабли роторные</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Пресс-подборщики</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Косилки дисковые</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Ворошилки</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Грабли роторные</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Пресс-подборщики</a></li>
 
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Обмотчики рулонов</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Прицепы для тюков</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Комбикормовый мини-завод</a>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Обмотчики рулонов</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Прицепы для тюков</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Комбикормовый мини-завод</a>
           </li>
 
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Измельчители рулонов</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Миксера-кормораздатчики</a>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Измельчители рулонов</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Миксера-кормораздатчики</a>
           </li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Фронтальные погрузчики</a>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Фронтальные погрузчики</a>
           </li>
 
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Насадки</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Катки для трамбовки
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Насадки</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Катки для трамбовки
               силоса</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Силосные вилы</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Силосные вилы</a></li>
 
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Дозатор-аппликатор для
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Дозатор-аппликатор для
               внесения
               консерванта</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Мульчирователь</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Гидравлическое плечо</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Щетка коммунальная</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Отвал для уборки снега</a>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Мульчирователь</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Гидравлическое плечо</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Щетка коммунальная</a></li>
+          <li class="footer__item"><a href="technic-page.html" class="footer__item-link">Отвал для уборки снега</a>
           </li>
         </ul>
       </div>
@@ -777,19 +719,19 @@
         </ul>
       </div>
       <div class="footer__block">
-        <a href="javascript:void(0);" class="footer__subtitle">О компании</a>
+        <a href="about.html" class="footer__subtitle">О компании</a>
         <ul class="footer__list">
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Отзывы</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Новости</a></li>
-          <li class="footer__item"><a href="javascript:void(0);" class="footer__item-link">Вопросы и ответы</a></li>
+          <li class="footer__item"><a href="reviews.html" class="footer__item-link">Отзывы</a></li>
+          <li class="footer__item"><a href="news.html" class="footer__item-link">Новости</a></li>
+          <li class="footer__item"><a href="question.html" class="footer__item-link">Вопросы и ответы</a></li>
         </ul>
       </div>
       <div class="footer__block">
         <a href="javascript:void(0);" class="footer__subtitle">Статьи</a>
-        <a href="javascript:void(0);" class="footer__subtitle">Каталоги</a>
-        <a href="javascript:void(0);" class="footer__subtitle">Контакты</a>
-        <a href="javascript:void(0);" class="footer__subtitle">Оплата и доставка</a>
-        <a href="javascript:void(0);" class="footer__subtitle">Запчасти для сельхозтехники</a>
+        <a href="catalogs.html" class="footer__subtitle">Каталоги</a>
+        <a href="contacts.html" class="footer__subtitle">Контакты</a>
+        <a href="delivery.html" class="footer__subtitle">Оплата и доставка</a>
+        <a href="technic-page.html" class="footer__subtitle">Запчасти для сельхозтехники</a>
       </div>
       <div class="footer__block">
         <a href="javascript:void(0);" class="footer__subtitle">Карта сайта</a>

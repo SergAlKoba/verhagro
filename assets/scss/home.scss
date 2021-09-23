@@ -152,7 +152,7 @@
     margin-top: 15px;
     height: 118px;
     @media (min-width: 1400px) {
-      height: 194px;
+      height: 172px;
     }
   }
 
@@ -166,6 +166,7 @@
     text-align: center;
     @include font-primary($font-size-base-mob, $color_black, normal, 17px);
     @media (min-width: 1400px) {
+      margin-top: 27px;
       @include font-primary($font-size-base, $color_black, normal, 19px);
     }
   }
@@ -254,6 +255,7 @@
   }
 
   &__heading-title {
+    margin: 0;
     line-height: 38px;
     word-break: break-word;
   }
@@ -498,5 +500,14 @@
   &__button {
     margin-top: 37px;
     min-width: 192px;
+  }
+}
+
+h1 {
+  @include font-primary( $h2-mob, $color_black, 500, 42px );
+  text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    @include font-primary( $h2 );
   }
 }

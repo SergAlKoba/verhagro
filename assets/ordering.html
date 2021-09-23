@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Оформление заказа</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+  <link rel="stylesheet" href="css/ordering.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+  <!-- Основной контент -->
+
+  <div class="wrapper" id="wrapper">
+    <!-- Popup -->
+    <include src="assets/templates/popup.html"></include>
+
+    <!-- Header -->
+    <include src="assets/templates/header.html"></include>
+
+    <main class="main" id="main">
+
+      <div class="bread-crumbs">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li>/</li>
+          <li><span>Оформление заказа</span></li>
+        </ul>
+      </div>
+
+      <!-- Секция order-->
+      <section class="order fadeInUp wow">
+        <div class="order__inner">
+          <form class="form">
+            <h2>Контактные данные</h2>
+            <div class="form__row">
+              <div class="form__column">
+                <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                <label>Ваше имя</label>
+                <input class="form__input" required type="text">
+                <span class="error__text">Ошибка</span>
+              </div>
+              <div class="form__column">
+                <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                <label>Ваш телефон*</label>
+                <input class="form__input" required type="text">
+                <span class="error__text">Ошибка</span>
+              </div>
+              <div class="form__column">
+                <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                <label>Ваш e-mail</label>
+                <input class="form__input" required type="text">
+                <span class="error__text">Ошибка</span>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="form__radio"><input type="radio" name="radio-1">Физическое лицо</label>
+              <label class="form__radio"><input type="radio" name="radio-1">Юридическое лицо</label>
+            </div>
+            <h2>Способ оплаты</h2>
+            <div class="form__row">
+              <label class="form__radio"><input type="radio" name="radio-2">Наличными при получении</label>
+              <label class="form__radio"><input type="radio" name="radio-2">Оплата картой</label>
+              <label class="form__radio"><input type="radio" name="radio-2">Безналичный расчет</label>
+            </div>
+            <h2>Способ доставки</h2>
+            <div class="form__row">
+              <div class="form__column">
+                <label class="form__radio"><input type="radio" name="radio-3">Курьером</label>
+                <fieldset class="form__fieldset">
+                  <div class="form__column">
+                    <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                    <label>Область</label>
+                    <input class="form__input" required type="text">
+                    <span class="error__text">Ошибка</span>
+                  </div>
+                  <div class="form__column">
+                    <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                    <label>Город</label>
+                    <input class="form__input" required type="text">
+                    <span class="error__text">Ошибка</span>
+                  </div>
+                  <div class="form__column">
+                    <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                    <label>Улица</label>
+                    <input class="form__input" required type="text">
+                    <span class="error__text">Ошибка</span>
+                  </div>
+                  <div class="form__columns">
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Дом</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Кв</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__column">
+                <label class="form__radio"><input type="radio" name="radio-3">Новая почта</label>
+                <fieldset class="form__fieldset">
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-4">На склад</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Номер отделения</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-4">По адресу</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Улица</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__columns">
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Дом</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Кв</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__column">
+                <label class="form__radio"><input type="radio" name="radio-3">Интайм</label>
+                <fieldset class="form__fieldset">
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-5">На склад</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Номер отделения</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-5">По адресу</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Улица</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__columns">
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Дом</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Кв</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form__column">
+                <label class="form__radio"><input type="radio" name="radio-3">САТ</label>
+                <fieldset class="form__fieldset">
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-6">На склад</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Номер отделения</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__radio"><input type="radio" name="radio-6">По адресу</label>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Область</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Город</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__column">
+                      <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                      <label>Улица</label>
+                      <input class="form__input" required type="text">
+                      <span class="error__text">Ошибка</span>
+                    </div>
+                    <div class="form__columns">
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Дом</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                      <div class="form__column">
+                        <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                        <label>Кв</label>
+                        <input class="form__input" required type="text">
+                        <span class="error__text">Ошибка</span>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="form__textarea">
+              <label>Комментарий</label>
+              <textarea></textarea>
+            </div>
+            <button class="form__button button">Оформить заказ</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <include src="assets/templates/footer.html"></include>
+
+  </div>
+
+  <!-- Скрипты -->
+  <script src="js/core.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/jcf.min.js"></script>
+  <script src="js/jcf.radio.min.js"></script>
+  <script src="js/ordering.min.js"></script>
+
+</body>
+
+</html>

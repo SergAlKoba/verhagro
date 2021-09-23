@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Личный кабинет</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+  <link rel="stylesheet" href="css/personal-area.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+  <!-- Основной контент -->
+
+  <div class="wrapper" id="wrapper">
+    <!-- Popup -->
+    <include src="assets/templates/popup.html"></include>
+
+    <!-- Header -->
+    <include src="assets/templates/header.html"></include>
+
+    <main class="main" id="main">
+
+      <div class="bread-crumbs">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li>/</li>
+          <li><span>Личный кабинет</span></li>
+        </ul>
+      </div>
+
+      <!-- Секция personal-area-->
+      <section class="personal-area fadeInUp wow">
+        <div class="personal-area__inner">
+          <h1>Личный кабинет</h1>
+          <ul class="personal-area__list">
+            <li class="tab-link" data-tab="1">
+              <a href="javascript:void(0);">Личные данные</a>
+            </li>
+            <li class="tab-link active" data-tab="2">
+              <a href="javascript:void(0);">Адрес доставки</a>
+            </li>
+            <li class="tab-link" data-tab="3">
+              <a href="javascript:void(0);">Мои заказы</a>
+            </li>
+            <li class="tab-link" data-tab="4">
+              <a href="javascript:void(0);">Избранное</a>
+            </li>
+            <li class="tab-link" data-tab="5">
+              <a href="javascript:void(0);">Моя скидка</a>
+            </li>
+          </ul>
+          <div class="personal-area__content">
+            <form class="form tab-content" data-tab="1">
+              <div class="form__row">
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Ваше имя</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Ваш e-mail</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Старый пароль</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Новый пароль</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Подтверждение пароля</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <button class="form__button button">Сохранить</button>
+              </div>
+            </form>
+            <form class="form tab-content address" data-tab="2">
+              <div class="form__row">
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Область</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Улица</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__column">
+                  <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                  <label>Город</label>
+                  <input class="form__input" required type="text">
+                  <span class="error__text">Ошибка</span>
+                </div>
+                <div class="form__columns">
+                  <div class="form__column">
+                    <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                    <label>Дом</label>
+                    <input class="form__input" required type="text">
+                    <span class="error__text">Ошибка</span>
+                  </div>
+                  <div class="form__column">
+                    <!-- за включение border ошибки отвечает класс .erore для form__input-->
+                    <label>Кв</label>
+                    <input class="form__input" required type="text">
+                    <span class="error__text">Ошибка</span>
+                  </div>
+                </div>
+                <button class="form__button button">Сохранить</button>
+              </div>
+              <a href="#" class="add">Добавить адрес</a>
+            </form>
+            <div class="tab-content order" data-tab="3">
+              <h2>Заказ №1235465464, <span>24.03.2020</span></h2>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);" class="order__link">
+                    <img src="img/img-1.png" class="order__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="order__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="order__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="order__amount">2шт</span>
+                  <span class="order__price">
+                    160 000 руб.
+                  </span>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="order__link">
+                    <img src="img/img-1.png" class="order__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="order__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="order__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="order__amount">2шт</span>
+                  <span class="order__price">
+                    160 000 руб.
+                  </span>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="order__link">
+                    <img src="img/img-1.png" class="order__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="order__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="order__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="order__amount">2шт</span>
+                  <span class="order__price">
+                    160 000 руб.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <form class="form tab-content favorites" data-tab="4">
+              <ul>
+                <li>
+                  <a href="javascript:void(0);" class="favorites__link">
+                    <img src="img/img-1.png" class="favorites__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="favorites__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="favorites__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="favorites__price">
+                    160 000 руб.
+                    <span>В наличии</span>
+                  </span>
+                  <button class="favorites__button button button--border">Купить</button>
+                  <span class="close"></span>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="favorites__link">
+                    <img src="img/img-1.png" class="favorites__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="favorites__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="favorites__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="favorites__price">
+                    160 000 руб.
+                    <span>В наличии</span>
+                  </span>
+                  <button class="favorites__button button button--border">Купить</button>
+                  <span class="close"></span>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="favorites__link">
+                    <img src="img/img-1.png" class="favorites__image" alt="">
+                  </a>
+                  <a href="javascript:void(0);" class="favorites__text">
+                    Пресс-подборщик с константной камерой прессования Z562
+                    <span class="favorites__description">
+                      <span>125868</span>
+                      <span>Артикул: 122343</span>
+                      <span>Комплектность: Lorem Ipsum</span>
+                      <span>Производитель: Lorem Ipsum</span>
+                    </span>
+                  </a>
+                  <span class="favorites__price">
+                    160 000 руб.
+                    <span>В наличии</span>
+                  </span>
+                  <button class="favorites__button button button--border">Купить</button>
+                  <span class="close"></span>
+                </li>
+              </ul>
+            </form>
+            <div class="tab-content active discount" data-tab="5">
+              <span class="discount__description">Ваша накопительная <span> скидка 5%</span></span>
+              <span class="discount__description">Для получения постоянной
+                <span> скидки 7% <span> осталось 34 000 </span></span>
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция recently models -->
+      <section class="recently fadeInUp wow" id="recently">
+        <div class="recently__heading">
+          <h2 class="recently__heading-title fadeInUp wow">Вы недавно просматривали</h2>
+        </div>
+        <div class="recently__inner">
+          <div class="recently__carousel">
+            <div class="recently__item">
+              <div class="recently__item-inner">
+                <span class="recently__item-title">Z514</span>
+                <a href="#" class="recently__item-link">
+                  <img src="img/img-1.png" class="recently__item-image" alt="">
+                </a>
+                <p class="recently__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="recently__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="recently__item">
+              <div class="recently__item-inner">
+                <span class="recently__item-title">Z514</span>
+                <a href="#" class="recently__item-link">
+                  <img src="img/img-1.png" class="recently__item-image" alt="">
+                </a>
+                <p class="recently__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="recently__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="recently__item">
+              <div class="recently__item-inner">
+                <span class="recently__item-title">Z514</span>
+                <a href="#" class="recently__item-link">
+                  <img src="img/img-1.png" class="recently__item-image" alt="">
+                </a>
+                <p class="recently__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="recently__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="recently__item">
+              <div class="recently__item-inner">
+                <span class="recently__item-title">Z514</span>
+                <a href="#" class="recently__item-link">
+                  <img src="img/img-1.png" class="recently__item-image" alt="">
+                </a>
+                <p class="recently__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="recently__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="recently__item">
+              <div class="recently__item-inner">
+                <span class="recently__item-title">Z514</span>
+                <a href="#" class="recently__item-link">
+                  <img src="img/img-1.png" class="recently__item-image" alt="">
+                </a>
+                <p class="recently__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="recently__item-price">70 000 руб.</span>
+              </div>
+            </div>
+          </div>
+          <div class="recently__action slick-action">
+            <button class="recently__prev slick-arrow slick-prev"></button>
+            <div class="recently__dots slick-dots"></div>
+            <button class="recently__next slick-arrow slick-next"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция Promotional -->
+      <section class="promotional fadeInUp wow" id="promotional">
+        <div class="promotional__heading">
+          <h2 class="promotional__heading-title fadeInUp wow">Акционные предложения</h2>
+        </div>
+        <div class="promotional__inner">
+          <div class="promotional__carousel">
+            <div class="promotional__item">
+              <div class="promotional__item-inner">
+                <span class="promotional__item-title">Z514</span>
+                <a href="#" class="promotional__item-link">
+                  <img src="img/img-1.png" class="promotional__item-image" alt="">
+                </a>
+                <p class="promotional__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="promotional__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="promotional__item">
+              <div class="promotional__item-inner">
+                <span class="promotional__item-title">Z514</span>
+                <a href="#" class="promotional__item-link">
+                  <img src="img/img-1.png" class="promotional__item-image" alt="">
+                </a>
+                <p class="promotional__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="promotional__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="promotional__item">
+              <div class="promotional__item-inner">
+                <span class="promotional__item-title">Z514</span>
+                <a href="#" class="promotional__item-link">
+                  <img src="img/img-1.png" class="promotional__item-image" alt="">
+                </a>
+                <p class="promotional__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="promotional__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="promotional__item">
+              <div class="promotional__item-inner">
+                <span class="promotional__item-title">Z514</span>
+                <a href="#" class="promotional__item-link">
+                  <img src="img/img-1.png" class="promotional__item-image" alt="">
+                </a>
+                <p class="promotional__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="promotional__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="promotional__item">
+              <div class="promotional__item-inner">
+                <span class="promotional__item-title">Z514</span>
+                <a href="#" class="promotional__item-link">
+                  <img src="img/img-1.png" class="promotional__item-image" alt="">
+                </a>
+                <p class="promotional__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="promotional__item-price">70 000 руб.</span>
+              </div>
+            </div>
+          </div>
+          <div class="promotional__action slick-action">
+            <button class="promotional__prev slick-arrow slick-prev"></button>
+            <div class="promotional__dots slick-dots"></div>
+            <button class="promotional__next slick-arrow slick-next"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция Popular models -->
+      <section class="popular fadeInUp wow" id="popular">
+        <div class="popular__heading">
+          <h2 class="popular__heading-title fadeInUp wow">Популярные товары</h2>
+        </div>
+        <div class="popular__inner">
+          <div class="popular__carousel">
+            <div class="popular__item">
+              <div class="popular__item-inner">
+                <span class="popular__item-title">Z514</span>
+                <a href="#" class="popular__item-link">
+                  <img src="img/img-1.png" class="popular__item-image" alt="">
+                </a>
+                <p class="popular__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="popular__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="popular__item">
+              <div class="popular__item-inner">
+                <span class="popular__item-title">Z514</span>
+                <a href="#" class="popular__item-link">
+                  <img src="img/img-1.png" class="popular__item-image" alt="">
+                </a>
+                <p class="popular__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="popular__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="popular__item">
+              <div class="popular__item-inner">
+                <span class="popular__item-title">Z514</span>
+                <a href="#" class="popular__item-link">
+                  <img src="img/img-1.png" class="popular__item-image" alt="">
+                </a>
+                <p class="popular__item-text">Рулонный пресс-подборщик </p>
+                <span class="popular__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="popular__item">
+              <div class="popular__item-inner">
+                <span class="popular__item-title">Z514</span>
+                <a href="#" class="popular__item-link">
+                  <img src="img/img-1.png" class="popular__item-image" alt="">
+                </a>
+                <p class="popular__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="popular__item-price">70 000 руб.</span>
+              </div>
+            </div>
+            <div class="popular__item">
+              <div class="popular__item-inner">
+                <span class="popular__item-title">Z514</span>
+                <a href="#" class="popular__item-link">
+                  <img src="img/img-1.png" class="popular__item-image" alt="">
+                </a>
+                <p class="popular__item-text">Рулонный пресс-подборщик с вариационной камерой
+                  прессования</p>
+                <span class="popular__item-price">70 000 руб.</span>
+              </div>
+            </div>
+          </div>
+          <div class="popular__action slick-action">
+            <button class="popular__prev slick-arrow slick-prev"></button>
+            <div class="popular__dots slick-dots"></div>
+            <button class="popular__next slick-arrow slick-next"></button>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <include src="assets/templates/footer.html"></include>
+
+  </div>
+
+  <!-- Скрипты -->
+  <script src="js/core.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/personal-area.min.js"></script>
+</body>
+
+</html>

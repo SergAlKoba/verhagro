@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата и доставка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+    <link rel="stylesheet" href="css/delivery.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+    <!-- Основной контент -->
+
+    <div class="wrapper" id="wrapper">
+        <!-- Popup -->
+        <include src="assets/templates/popup.html"></include>
+
+        <!-- Header -->
+        <include src="assets/templates/header.html"></include>
+
+        <main class="main" id="main">
+
+            <!-- Секция Главный баннер -->
+            <section class="banner parallax-container" data-parallax-img="img/delivery-banner.jpg" id="news-banner">
+                <div class="banner__inner parallax-content">
+                    <h1 class="banner__title">Оплата и доставка</h1>
+                </div>
+            </section>
+
+            <div class="bread-crumbs">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>/</li>
+                    <li><span>Оплата и доставка</span></li>
+                </ul>
+            </div>
+
+            <!-- Секция Контакты -->
+            <section class="delivery" id="delivery">
+                <div class="delivery__inner">
+                    <div class="delivery__image zoomIn wow"></div>
+                    <div class="delivery__content fadeInUp wow">
+                        <div class="delivery__item">
+                            <h3 class="delivery__title">Способы оплаты</h3>
+                            <ul class="delivery__list">
+                                <li class="delivery__list-item">
+                                    <img class="delivery__icon" src="img/icon-1.svg" alt="">
+                                    <p class="delivery__text">Наличный расчет</p>
+                                </li>
+                                <li class="delivery__list-item">
+                                    <img class="delivery__icon" src="img/icon-2.svg" alt="">
+                                    <p class="delivery__text">Безналичный рассчет (с НДС и без НДС)</p>
+                                </li>
+                                <li class="delivery__list-item">
+                                    <img class="delivery__icon visa" src="img/icon-3.svg" alt="">
+                                    <p class="delivery__text">Visa/ Mastercard</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="delivery__item">
+                            <h3 class="delivery__title">Способы доставки</h3>
+                            <ul class="delivery__list">
+                                <li class="delivery__list-item">
+                                    <img class="delivery__icon car" src="img/icon-4.svg" alt="">
+                                    <p class="delivery__text">Самовывоз</p>
+                                </li>
+                                <li class="delivery__list-item">
+                                    <img class="delivery__icon car" src="img/icon-4.svg" alt="">
+                                    <p class="delivery__text">По Украине курьерскими службами и совместная доставка</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <include src="assets/templates/footer.html"></include>
+
+    </div>
+
+    <!-- Скрипты -->
+    <script src="js/core.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/contacts.min.js"></script>
+</body>
+
+</html>

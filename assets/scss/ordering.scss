@@ -1,0 +1,139 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'libs/form';
+
+.order {
+  &__inner {
+    @include container;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: underline;
+    text-transform: none;
+    &:not(:first-of-type) {
+      margin-top: 27px;
+      margin-bottom: 28px;
+      padding-top: 30px;
+      border-top: 1px solid $color_silver;
+    }
+    @media (min-width: 768px) {
+      margin-top: 32px;
+      font-size: 18px;
+      line-height: 24px;
+
+      &:not(:first-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  label {
+    display: flex;
+  }
+  fieldset {
+    padding: 5px 0 14px 26px;
+    max-width: 556px;
+    display: none;
+    border: none;
+    &:first-of-type {
+      margin-top: 10px;
+    }
+    &.active {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &.active {
+        display: flex;
+      }
+    }
+
+    .form__row {
+      @media (min-width: 768px) {
+        width: 49%;
+        display: block;
+      }
+    }
+    .form__radio {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form {
+  padding-bottom: 100px;
+  &__row:first-of-type {
+    @media (min-width: 768px) {
+      max-width: 925px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__row:nth-of-type(2) {
+    @media (min-width: 768px) {
+      display: flex;
+      .form__radio {
+        margin-right: 51px;
+      }
+    }
+  }
+
+  &__row:nth-of-type(3) {
+    @media (min-width: 768px) {
+      display: flex;
+      .form__radio {
+        margin-right: 30px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .form__radio {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  &__input {
+    margin-top: 5px;
+    max-width: 300px;
+  }
+
+  &__radio {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__column {
+    width: 100%;
+  }
+
+  &__columns {
+    max-width: 230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  &__textarea {
+    margin-top: 30px;
+    padding-top: 30px;
+    width: 100%;
+    border-top: 1px solid $color_silver;
+    @media (min-width: 768px) {
+      margin-top: 37px;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+    textarea {
+      margin-bottom: 26px;
+      max-width: 823px;
+    }
+  }
+}

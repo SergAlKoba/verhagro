@@ -1,0 +1,221 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+
+.banner {
+  height: 140px;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 1680px) {
+    height: 293px;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    @include container;
+  }
+
+  &__title {
+    text-transform: none;
+    color: $color_white;
+  }
+}
+
+.technics {
+  padding-top: 0;
+  padding-bottom: 32px;
+  @media (min-width: 768px) {
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-bottom: 165px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    padding-top: 30px;
+    @media (min-width: 1024px) {
+      width: 48%;
+    }
+  }
+
+  &__title {
+    @include font-primary( 25px, $color_black, 500, 29px );
+    @media (min-width: 1400px) {
+      @include font-primary( 30px, $color_black, 500, 39px );
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    margin-top: 17px;
+    width: 252px;
+    order: 1;
+    @media (min-width: 768px) {
+      min-width: 353px;
+    }
+    @media (min-width: 1024px) {
+      margin-top: -23px;
+    }
+    @media (min-width: 1280px) {
+      margin: -31px 84px;
+      min-width: 447px;
+      order: 2;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 9;
+      top: 32px;
+      left: 45px;
+      width: 234px;
+      height: 141px;
+      border: 4px solid $color_grey;
+      @media (min-width: 768px) {
+        width: 350px;
+        height: 230px;
+        border: 8px solid $color_grey;
+      }
+      @media (min-width: 1280px) {
+        top: 55px;
+        left: 93px;
+        width: 442px;
+        height: 284px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    margin-top: 7px;
+    order: 2;
+    @media (min-width: 768px) {
+      margin-top: 0;
+      padding-right: 20px;
+      order: 1;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 3px;
+      max-width: 50%;
+    }
+  }
+
+  &__description {
+    padding: 14px 10px 17px;
+    display: block;
+    border: 8px solid $color_primary;
+    @include font-primary($font-size-base, $color_black, 500, 20px);
+    @media (min-width: 1400px) {
+      padding: 18px 23px 17px;
+      @include font-primary($font-size-xs, $color_black, 500, 23px);
+    }
+  }
+
+  &__text {
+    margin-top: 26px;
+    line-height: 19px;
+    @media (min-width: 1400px) {
+      margin-top: 25px;
+      line-height: 23px;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    min-width: 192px;
+  }
+}
+
+.technics:nth-child(2n) {
+  padding: 0 0 34px;
+  background-color: $color_athensGray;
+
+  @media (min-width: 768px) {
+    padding: 20px 0 75px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 61px 0 124px;
+  }
+
+  .technics__heading {
+    @media (min-width: 1024px) {
+      margin-left: 52%;
+    }
+    @media (min-width: 1400px) {
+      margin-left: 51%;
+    }
+  }
+
+  .technics__inner {
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .technics__content {
+    @media (min-width: 768px) {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+    @media (min-width: 1400px) {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .technics__image-wrapper {
+    @media (min-width: 1280px) {
+      margin: -31px 84px 0 0;
+    }
+    &::before {
+      border-color: $color_white;
+      @media (min-width: 768px) {
+        left: -45px;
+      }
+      @media (min-width: 1024px) {
+        left: 45px;
+      }
+      @media (min-width: 1280px) {
+        left: 93px;
+      }
+    }
+  }
+}
+
+.technics:nth-of-type(4),
+.technics:nth-of-type(6),
+.technics:nth-of-type(8),
+.technics:nth-of-type(10) {
+  padding-top: 0;
+  padding-bottom: 39px;
+  @media (min-width: 768px) {
+    padding: 20px 0 75px;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 37px;
+    padding-bottom: 135px;
+  }
+}

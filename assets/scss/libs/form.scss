@@ -1,13 +1,23 @@
 .error__text {
-  margin-top: 5px;
+  position: absolute;
+  bottom: -18px;
   opacity: 0;
+  font-size: 12px;
   color: $color_secondary;
+  @media (min-width: 1024px) {
+    bottom: -2px;
+  }
 }
+
+.form__column {
+  position: relative;
+}
+
 .form__input,
-.form__textarea,
-.jcf-select {
+textarea {
+  margin-bottom: 16px;
   padding: 13px;
-  max-width: 100%;
+  width: 100%;
   height: 45px;
   display: flex;
   align-items: center;
@@ -25,63 +35,82 @@
       opacity: 1;
     }
   }
-
-  @media (min-width: 768px) {
-  }
-
-  &::placeholder {
-    @media (min-width: 768px) {
-    }
-  }
 }
 
 label {
   display: block;
 }
 
-.form__textarea {
+textarea {
   overflow: auto;
   width: 100%;
-  height: 130px;
+  height: 155px;
   resize: none;
 }
 
-.select {
+span.jcf-checkbox {
+  position: relative;
+  margin-right: 15px;
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-color: #fff;
+  border: 1px solid $color_primary;
+  border-radius: 2px;
+
+  span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 6px;
+    height: 9px;
+    display: none;
+    border: solid $color_primary;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.jcf-checkbox.jcf-checked span:before {
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
 }
 
 span.jcf-radio {
   position: relative;
   margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 12px;
-  min-width: 12px;
-  height: 12px;
-  min-height: 12px;
-  background: $color_silver;
-  box-shadow: inset 0 0 5px rgba(155, 155, 155, .5);
-  background-color: inherit;
-  margin-top: 1px;
-  border-radius: 2px;
-}
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-color: $color_white;
+  border: 1px solid $color_DimGray;
+  border-radius: 50%;
 
-.jcf-radio.jcf-checked {
-  span {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background: $color_primary;
-    border-radius: 2px;
+  span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: $color_DimGray;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-::-webkit-validation-bubble {
-  display: flex;
-  align-items: center;
+.jcf-radio.jcf-checked {
+  border: 1px solid $color_primary;
+  span:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_primary;
+  }
 }
 
 .number {
@@ -180,26 +209,18 @@ span.jcf-radio {
   &::after {
     content: '';
     position: absolute;
-    top: 6px;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 20px;
     height: 2px;
     background: $color_DimGray;
   }
 
   &::before {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 
   &::after {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 }

@@ -1,93 +1,34 @@
-<div class="modal modal__application">
-  <div class="modal__inner">
-    <span class="modal__close close"></span>
-    <h4 class="modal__title">Обратный звонок</h4>
-    <span class="modal__description">Мы перезвоним в ближайшее время</span>
-    <form class="modal__form form">
-      <div class="modal__form-row form-row">
-        <div class="modal__form-column form-column">
-          <!-- за включение border ошибки отвечает класс .error для form__input-->
-          <label>Ваше имя</label>
-          <input class="modal__input form__input" required type="text" placeholder="Ваше имя">
-          <span class="error__text">Ошибка</span>
-        </div>
-        <div class="modal__form-column form-column">
-          <!-- за включение border ошибки отвечает класс .error для form__input-->
-          <label>Ваш телефон</label>
-          <input class="modal__input form__input only_number" required type="text" placeholder="38(123) ___ __ __">
-          <span class="error__text">Ошибка</span>
-        </div>
-      </div>
-      <div class="modal__action">
-        <button class="button modal__button inform">Заказать звонок</button>
-      </div>
-    </form>
-  </div>
-</div>
+<!-- popup review -->
 
-<!-- popup inform -->
-
-<div class="modal modal__inform">
-  <div class="modal__inner">
-    <span class="modal__close close"></span>
-    <h4 class="modal__title">Спасибо за заявку!</h4>
-    <span class="modal__description">Мы свяжемся с Вами в ближайшее время</span>
-    <div class="modal__action">
-      <button class="button modal__button finish">Закрыть</button>
+<div class="modal modal__review">
+  <div class="inner">
+    <span class="close"></span>
+    <div class="heading">
+      <h4 class="title">Вы можете оставить отзыв</h4>
+      <p>Используйте данную форму для того, чтобы оставить отзыв</p>
+      <span class="description">Комментарий будет выведен только после предварительной проверки нашими
+        сотрудниками.</span>
     </div>
-  </div>
-</div>
-
-<!-- popup log-in -->
-
-<div class="modal modal__log-in">
-  <div class="modal__inner">
-    <h4 class="modal__title">Вход</h4>
-    <form class="modal__form form">
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Почта</label>
-      <input class="modal__input form__input" required type="text" placeholder="почта@example.com">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль</label>
-      <input class="modal__input form__input" required type="password" placeholder="Введите пароль">
-      <span class="error__text">Ошибка</span>
-      <div class="modal__action">
-        <button class="button modal__button button">Войти</button>
-        <a href="javascript:void(0);" class="modal__link">Забыли пароль?</a>
+    <form class="form">
+      <div class="form__row">
+        <div class="form__column">
+          <!-- за включение border ошибки отвечает класс .error для form__input-->
+          <label class="label">Ваше имя</label>
+          <input class="input form__input" required type="text">
+          <span class="error__text">Ошибка</span>
+        </div>
+        <div class="form__column">
+          <!-- за включение border ошибки отвечает класс .error для form__input-->
+          <label class="modal__label">E-mail</label>
+          <input class="input form__input" required type="text">
+          <span class="error__text">Ошибка</span>
+        </div>
       </div>
-    </form>
-  </div>
-</div>
-
-<!-- popup registration -->
-
-<div class="modal modal__registration">
-  <div class="modal__inner">
-    <h4 class="modal__title">Регистрация</h4>
-    <form class="modal__form form">
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Имя</label>
-      <input class="modal__input form__input" required type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Телефон</label>
-      <input class="modal__input form__input only_number" required type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Почта</label>
-      <input class="modal__input form__input" required type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль</label>
-      <input class="modal__input form__input" required type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
-      <!-- за включение border ошибки отвечает класс .error для form__input-->
-      <label class="modal__label">Пароль еще раз</label>
-      <input class="modal__input form__input" required type="text" placeholder="">
-      <span class="error__text">Ошибка</span>
+      <label class="label">Текст сообщения</label>
+      <textarea></textarea>
       <div class="modal__action">
-        <button class="button modal__button">Зарегистрироваться</button>
+        <!-- класс finish отвечает за закрытие попапа при нажатии-->
+        <button class="button finish">Отправить</button>
       </div>
     </form>
   </div>

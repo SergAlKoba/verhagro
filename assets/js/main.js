@@ -26,8 +26,10 @@ $(window).on('scroll', function () {
 
   if (y >= headerHeight) {
     topBar.addClass('sticky');
+    $('.header').css('margin-bottom', topBar.innerHeight())
   } else {
     topBar.removeClass('sticky');
+    $('.header').css('margin-bottom', '0')
   }
 
 });
@@ -39,7 +41,7 @@ if ($(window).width() <= 1023) {
   $('.main').css('margin-top', '0');
 }
 
-$(window).on("resize", function () {
+window.addEventListener("resize", function () {
   if ($(window).width() <= 1023) {
     $('.main').css('margin-top', headerHeight);
   } else {
@@ -62,6 +64,7 @@ $(document).ready(function () {
   });
 
   $('.header__toggle-link').on('click', function () {
+    $('.page').toggleClass('hidden');
     $('.header__top').toggleClass('active');
     $('.header__overlay').toggleClass('active');
     $('.header__navigation').removeClass('active');
@@ -70,6 +73,7 @@ $(document).ready(function () {
   });
 
   $('.header__close').on('click', function () {
+    $('.page').removeClass('hidden');
     $('.header__toggle-link').removeClass('active');
     $('.header__top').removeClass('active');
     $('.header__overlay').removeClass('active');
@@ -170,43 +174,24 @@ $(document).ready(function () {
   //Попапы
   jQuery(function (a) {
     a(document).mouseup(function (b) {
-      var c = a(".modal__inner");
-      c.is(b.target) || 0 !== c.has(b.target).length || (c.removeClass("active-modal"),
-        a(".modal").removeClass("active-modal"),
+      var c = a(".modal>.inner");
+      c.is(b.target) || 0 !== c.has(b.target).length || (
+        a(".modal").fadeOut(),
         a("body").removeClass("showing-modal"))
     })
   });
 
-  $('.modal__close, .finish').on('click', function () {
-    $(".modal").removeClass('active-modal');
+  $('.close, .finish').on('click', function () {
+    $(".modal").fadeOut();
     $('body').removeClass('showing-modal');
-    $("#playerPopoup").attr('src', '')
   });
 
-  $('.application').on('click', function () {
-    $(".modal").removeClass('active-modal');
-    $(".modal__application").addClass('active-modal');
+  $('.reviews__button').on('click', function () {
+    $(".modal__review").fadeIn();
     $('body').addClass('showing-modal');
   });
 
-  $('.inform').on('click', function () {
-    $(".modal").removeClass('active-modal');
-    $(".modal__inform").addClass('active-modal');
-    $('body').addClass('showing-modal');
-  });
-
-  $('.log-in').on('click', function () {
-    $(".modal").removeClass('active-modal');
-    $(".modal__log-in").addClass('active-modal');
-    $('body').addClass('showing-modal');
-  });
-
-  $('.registration').on('click', function () {
-    $(".modal").removeClass('active-modal');
-    $(".modal__registration").addClass('active-modal');
-    $('body').addClass('showing-modal');
-  });
-
+  new WOW().init();
 
   jQuery(".only_number").keypress(function (e) {
     if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {

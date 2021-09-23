@@ -1,0 +1,319 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'slick.min.css';
+
+.about-banner {
+  height: 140px;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 1680px) {
+    height: 293px;
+  }
+  &__inner {
+    @include container;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    text-transform: none;
+    color: $color_white;
+  }
+}
+
+.about-page {
+  @include container;
+  @media (min-width: 768px) {
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1280px) {
+    padding-bottom: 100px;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 27px;
+    @media (min-width: 1280px) {
+      margin-top: 33px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 110%;
+    height: 160px;
+
+    @media (min-width: 768px) {
+      width: 100%;
+      height: 300px;
+    }
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 0;
+      left: 52%;
+      width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 1280px) {
+      left: 51%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @media (min-width: 1024px) {
+        object-position: -150px center;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 20px;
+    span {
+      font-weight: 500;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 0;
+      width: 49%;
+    }
+
+    p:not(:first-child) {
+      margin-top: 25px;
+      @media (min-width: 1024px) {
+        margin-top: 32px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  &__text {
+    @media (min-width: 1024px) {
+      margin-top: 32px;
+    }
+    p {
+      margin-top: 15px;
+      @media (min-width: 1024px) {
+        margin-top: 30px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+.about {
+  &__list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 26px 25px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (min-width: 1280px) {
+      padding-top: 58px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1280px) {
+      padding: 0 10px;
+    }
+    img {
+      padding: 15px;
+      width: 75px;
+      height: 75px;
+      border: 2px solid #209e53;
+    }
+
+    p {
+      margin-top: 20px;
+      padding: 0 5px;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}
+
+.carousel {
+  @include container;
+  position: relative;
+  margin-top: 32px;
+  padding: 0 0 36px;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    height: 51%;
+    background: url(../img/about-bg.jpg);
+    background-size: cover;
+    transform: translate(-50%, 0%);
+  }
+  @media (min-width: 768px) {
+    padding: 0 0 36px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  @media (min-width: 1280px) {
+    margin-top: 45px;
+    padding-bottom: 154px;
+    &::before {
+      height: 66%;
+    }
+  }
+
+  & .item {
+    padding-left: 20px;
+    width: 152px;
+    height: 200px;
+    @media (min-width: 768px) {
+      margin: 0 auto;
+      padding-left: 0;
+      width: auto;
+    }
+    @media (min-width: 1280px) {
+      width: 230px;
+      height: 335px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 65px;
+  @media (min-width: 1280px) {
+    padding-top: 63px;
+    padding-bottom: 91px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: none;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__list {
+    margin-top: 27px;
+    @media (min-width: 1280px) {
+      margin-top: 76px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 17px;
+    border-bottom: 1px solid $color_silver;
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      grid-gap: 20px;
+    }
+    @media (min-width: 1280px) {
+      padding-bottom: 30px;
+      grid-gap: 30px;
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__description {
+    @media (min-width: 1024px) {
+      padding-right: 20px;
+    }
+  }
+
+  &__name {
+    @include font-primary( $font-size-base-mob, $color_black, 500, 19px );
+    display: block;
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-base, $color_black, 500, 22px );
+    }
+  }
+
+  &__location {
+    @include font-primary( $font-size-base-mob, $color_black, 400, 19px );
+    margin-top: 2px;
+    display: block;
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-base, $color_black, 400, 22px );
+    }
+  }
+
+  &__time {
+    @include font-primary( 12px, #535C67, 400, 16px );
+    margin-top: 5px;
+    display: block;
+    @media (min-width: 1400px) {
+      @include font-primary( 14px, #535C67, 400, 19px );
+      margin-top: 8px;
+    }
+  }
+
+  &__text {
+    margin-top: 7px;
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-base, $color_black, 400, 22px );
+    }
+  }
+
+  &__action {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      padding-top: 44px;
+    }
+  }
+
+  &__button {
+    padding: 0 42px 0 37px;
+    min-width: 191px;
+    height: 64px;
+    font-size: 16px;
+    line-height: 19px;
+
+    &::after {
+      right: 16px;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 0 42px 0 11px;
+      height: 45px;
+      &::after {
+        right: 10px;
+      }
+    }
+  }
+}

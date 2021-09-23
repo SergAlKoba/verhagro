@@ -204,14 +204,14 @@
     &:first-child::before {
       width: 17px;
       height: 15px;
-      background: no-repeat url(../img/mail.svg);
+      background: center/contain no-repeat url(../img/mail.svg);
     }
 
     &:nth-of-type(2)::before,
     &:nth-of-type(3)::before {
       width: 15px;
       height: 15px;
-      background: no-repeat url(../img/telephone.svg);
+      background: center/contain no-repeat url(../img/telephone.png);
     }
   }
 
@@ -229,7 +229,7 @@
       left: 0;
       width: 15px;
       height: 19px;
-      background: no-repeat url(../img/mark.svg);
+      background: center/contain no-repeat url(../img/mark.svg);
     }
   }
 }

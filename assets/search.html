@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин запчастей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+    <link rel="stylesheet" href="css/search.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+    <!-- Основной контент -->
+
+    <div class="wrapper" id="wrapper">
+        <!-- Popup -->
+        <include src="assets/templates/popup.html"></include>
+
+        <!-- Header -->
+        <include src="assets/templates/header.html"></include>
+
+        <main class="main" id="main">
+
+            <!-- Секция Главный баннер -->
+            <section class="search-banner parallax-container" data-parallax-img="img/store-banner.jpg"
+                id="search-banner">
+                <div class="search-banner__inner parallax-content">
+                    <h1 class="search-banner__title">Интернет-магазин запчастей</h1>
+                </div>
+            </section>
+
+            <div class="bread-crumbs">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li>/</li>
+                    <li><span>Результат поиска</span></li>
+                </ul>
+            </div>
+
+            <!-- Поле поиска -->
+            <div class="search fadeInUp wow">
+                <form class="search__form">
+                    <input name="search" class="search__input" type="text" placeholder="Поиск">
+                    <button class="search__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path
+                                d="M19.6959 19.1277L14.7656 13.9295C16.0332 12.4018 16.7278 10.4797 16.7278 8.47874C16.7278 3.80364 12.9757 0 8.36391 0C3.75212 0 0 3.80364 0 8.47874C0 13.1538 3.75212 16.9575 8.36391 16.9575C10.0952 16.9575 11.7451 16.4281 13.1557 15.4232L18.1235 20.6609C18.3311 20.8795 18.6104 21 18.9097 21C19.193 21 19.4617 20.8905 19.6657 20.6914C20.0992 20.2686 20.113 19.5675 19.6959 19.1277ZM8.36391 2.21185C11.7727 2.21185 14.5459 5.0231 14.5459 8.47874C14.5459 11.9344 11.7727 14.7456 8.36391 14.7456C4.95507 14.7456 2.18189 11.9344 2.18189 8.47874C2.18189 5.0231 4.95507 2.21185 8.36391 2.21185Z"
+                                fill="#209E53" />
+                        </svg>
+                    </button>
+                    <h3 class="search__subtitle">Результаты поиска по запросу «Рулонный ». Найдено 12 товаров.</h3>
+                </form>
+            </div>
+
+            <!-- Секция store -->
+            <section class="store fadeInUp wow" id="store">
+                <div class="store__wrapper-button">
+                    <a href="#" class="store__button button">Фильтр</a>
+                </div>
+                <div class="store__filter-overlay"></div>
+                <div class="store__filter">
+                    <span class="store__filter-subtitle">Фильтр</span>
+                    <div class="store__filter-item brend">
+                        <h3 class="store__filter-title">По брендам</h3>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" class="filter__brend">Lorem Ipsum</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="store__filter-item">
+                        <h3 class="store__filter-title">По типу запчастей</h3>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="store__filter-item">
+                        <h3 class="store__filter-title">По типу техники</h3>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">Lorem Ipsum</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="store__filter-action">
+                        <a href="javascript:void(0);" class="store__filter-button button button--border">Назад</a>
+                        <a href="javascript:void(0);" class="store__filter-button button">Показать</a>
+                    </div>
+                </div>
+                <div class="store__inner">
+                    <div class="store__cards">
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                        <div class="store__item">
+                            <span class="store__item-title">Z514</span>
+                            <a href="#" class="store__item-link">
+                                <img src="img/img-1.png" class="store__item-image" alt="">
+                            </a>
+                            <p class="store__item-text">Рулонный пресс-подборщик с вариационной камерой прессования
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <include src="assets/templates/footer.html"></include>
+
+    </div>
+
+    <!-- Скрипты -->
+    <script src="js/core.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jcf.min.js"></script>
+    <script src="js/jcf.checkbox.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/store.min.js"></script>
+
+</body>
+
+</html>

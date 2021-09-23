@@ -1,0 +1,322 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'libs/form';
+@import 'slick.min.css';
+
+.search-banner {
+  height: 140px;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 1680px) {
+    height: 293px;
+  }
+
+  &__inner {
+    @include container;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    text-transform: none;
+    color: $color_white;
+  }
+}
+
+.search {
+  @include container;
+  position: relative;
+  margin-top: 16px;
+  padding: 20px 20px 0;
+  width: 100%;
+  order: 4;
+  @media (min-width: 1024px) {
+    margin-top: 38px;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 18px 35px 14px 14px;
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    border: 1px solid $color_primary;
+    @media (min-width: 1024px) {
+      padding: 18px 35px 14px 20px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    @media (min-width: 1024px) {
+      right: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 23px;
+    @include font-primary($font-size-base, $color_black, 500, 18px);
+    @media (min-width: 1024px) {
+      @include font-primary($font-size-m, $color_black, 500, 23px);
+    }
+  }
+}
+
+.store {
+  @include container;
+  padding-bottom: 40px;
+  @media (min-width: 1024px) {
+    padding-bottom: 136px;
+    display: grid;
+    grid-template-columns: 295px 1fr;
+    grid-gap: 20px;
+  }
+
+  &__wrapper-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    padding: 0 10px 0 27px;
+    min-width: 128px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      width: 15px;
+      height: 15px;
+      background: no-repeat url(../img/icon-8.svg);
+      transform: translate(0, -50%);
+    }
+    &:hover {
+      color: $color_white;
+      background-color: $color_primary;
+    }
+  }
+
+  &__filter-overlay {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background: rgba(2, 2, 2, 0.6);
+    &.active {
+      display: block;
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__filter {
+    margin-top: 42px;
+    padding: 20px 15px 28px;
+    height: min-content;
+    display: none;
+    background: #f1f2f5;
+    &.active {
+      position: fixed;
+      z-index: 150;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 20px 21px 28px;
+      overflow: auto;
+      width: 246px;
+      max-height: 100vh;
+      display: block;
+      background-color: $color_white;
+    }
+    @media (min-width: 1024px) {
+      display: block;
+    }
+
+    &-subtitle {
+      position: relative;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      padding-bottom: 10px;
+      display: block;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid $color_silver;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 15px;
+        height: 20px;
+        display: block;
+        background: no-repeat url(../img/arrow-left.svg);
+        background-position: 50% 50%;
+        cursor: pointer;
+      }
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &-item {
+      @media (min-width: 1024px) {
+        &:not(:first-child) {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &-button {
+      &:first-child {
+        min-width: 76px;
+        height: 35px;
+      }
+      &:last-child {
+        margin-left: 20px;
+        min-width: 84px;
+        height: 35px;
+      }
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &-title {
+      @include font-primary($font-size-base, $color_black, 500, 18px);
+      &:not(:first-of-type) {
+        margin-top: 34px;
+      }
+    }
+
+    ul {
+      margin-top: 15px;
+      padding-top: 15px;
+      overflow: hidden;
+      max-height: 0;
+      border-top: 1px solid $color_silver;
+      transition: max-height 0.2s ease-out;
+      @media (min-width: 1024px) {
+        margin-top: 20px;
+        padding: 0;
+        max-height: none;
+        border: none;
+      }
+    }
+
+    li:not(:first-of-type) {
+      margin-top: 5px;
+    }
+    li:last-child {
+      margin-bottom: 20px;
+      @media (min-width: 1024px) {
+        margin: 0;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      @include font-primary($font-size-base-mob, 400, 24px);
+      @media (min-width: 1024px) {
+        @include font-primary($font-size-base, $color_black, 400, 23px);
+      }
+    }
+  }
+
+  &__cards {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: 1024px) {
+      padding-top: 42px;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_white;
+    box-shadow: 0 4px 15px rgba(128, 141, 156, 0.11);
+    @media (min-width: 1400px) {
+      padding: 26px 15px;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    text-align: center;
+    @include font-primary( $font-size-m, $color_secondary, 500 );
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-l, $color_secondary, 500 );
+    }
+  }
+
+  &__item-link {
+    margin-top: 15px;
+    height: 65px;
+    display: block;
+    @media (min-width: 1400px) {
+      height: 150px;
+    }
+  }
+
+  &__item-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__item-text {
+    margin-top: 15px;
+    text-align: center;
+    @include font-primary(12px, $color_black, normal, 14px);
+    @media (min-width: 1024px) {
+      margin-top: 15px;
+      @include font-primary(15px, $color_black, normal, 17px);
+    }
+  }
+
+  &__action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: 1024px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__action-button {
+    min-width: 189px;
+  }
+}

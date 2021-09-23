@@ -1,0 +1,558 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'libs/form';
+@import 'slick.min.css';
+
+.personal-area {
+  h1 {
+    margin-top: 22px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
+
+    @media (min-width: 1400px) {
+      margin-top: 52px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  &__inner {
+    @media (min-width: 768px) {
+      @include container;
+    }
+  }
+
+  &__content {
+    padding-bottom: 50px;
+    border-bottom: 1px solid $color_silver;
+  }
+
+  &__list {
+    margin-top: 48px;
+    padding-bottom: 8px;
+    overflow: auto;
+    display: flex;
+    border-bottom: 1px solid $color_silver;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      margin-top: 70px;
+    }
+    @media (min-width: 1280px) {
+      padding-bottom: 18px;
+    }
+    li {
+      position: relative;
+      margin-left: 20px;
+      white-space: nowrap;
+      a {
+        color: $color_lightGrey;
+      }
+      &.active {
+        a {
+          color: $color_black;
+        }
+      }
+      &.active::after {
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $color_primary;
+        @media (min-width: 1280px) {
+          bottom: -18px;
+        }
+      }
+      @media (min-width: 768px) {
+        margin-right: 15px;
+        margin-left: 17px;
+      }
+      @media (min-width: 1024px) {
+        margin-right: 40px;
+        a {
+          font-size: 18px;
+        }
+      }
+      @media (min-width: 1400px) {
+        margin-right: 70px;
+      }
+    }
+    &__content {
+      padding: 30px 20px;
+      border-bottom: 1px solid $color_silver;
+    }
+  }
+}
+
+.form {
+  padding: 30px 20px;
+  display: none;
+  &.active {
+    display: grid;
+  }
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  @media (min-width: 1024px) {
+    padding: 50px 0 0;
+    width: 58%;
+  }
+  @media (min-width: 1400px) {
+    grid-gap: 123px;
+  }
+
+  &__column {
+    @media (min-width: 1024px) {
+      padding-bottom: 1px;
+    }
+  }
+
+  &__columns {
+    width: 84%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+    @media (min-width: 480px) {
+      width: 100%;
+      grid-gap: 17px;
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .add {
+    margin-top: 40px;
+    display: block;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #209e53;
+    @media (min-width: 480px) {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+.favorites,
+.order {
+  width: 100%;
+  &.active {
+    display: block;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (min-width: 480px) {
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      padding: 42px 105px 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .close {
+    top: 10px;
+    right: 3px;
+    @media (min-width: 480px) {
+      top: 0;
+      right: 0;
+    }
+    @media (min-width: 1024px) {
+      top: 40%;
+      right: 0;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__link {
+    width: 127px;
+    display: flex;
+    @media (min-width: 480px) {
+      width: 85%;
+    }
+    @media (min-width: 1024px) {
+      width: 194px;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+      color: $color_primary;
+      .order__description span {
+        text-decoration: none;
+      }
+      span {
+        text-decoration: none;
+      }
+    }
+    @media (min-width: 480px) {
+      margin-top: 0;
+      padding-right: 20px;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 0;
+      margin-left: 15px;
+      padding-right: 0;
+      max-width: 35%;
+    }
+    @media (min-width: 1280px) {
+      padding-right: 82px;
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+    display: block;
+    @media (min-width: 1024px) {
+      margin-top: 17px;
+    }
+  }
+
+  &__description span {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color_lightGrey;
+    @media (min-width: 1024px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__price {
+    margin-top: 10px;
+    display: block;
+    @media (min-width: 1024px) {
+      width: 20%;
+      margin: 0 25px;
+    }
+  }
+
+  &__price span {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #209e53;
+  }
+
+  &__amount {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    @media (min-width: 480px) {
+      text-align: center;
+    }
+    @media (min-width: 1024px) {
+      margin: 0;
+      width: 29%;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+  }
+
+  &__button {
+    margin-top: 17px;
+    min-width: 190px;
+    @media (min-width: 1024px) {
+      margin-top: 0;
+    }
+    @media (min-width: 1280px) {
+      margin-left: 61px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__result {
+    padding: 13px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__sum {
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.order {
+  padding: 30px 20px;
+  display: none;
+  &.active {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 25px 0 0;
+  }
+
+  h2 {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    text-transform: none;
+    border-bottom: 1px solid $color_silver;
+    @media (min-width: 1024px) {
+      padding-left: 20px;
+      padding-bottom: 5px;
+      font-size: 18px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 28px;
+    @media (min-width: 1024px) {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    @media (min-width: 1024px) {
+      padding: 42px 0 0 0;
+    }
+  }
+
+  &__text {
+    @media (min-width: 1280px) {
+      padding-right: 142px;
+      max-width: 34%;
+    }
+  }
+
+  &__description {
+    @media (min-width: 1024px) {
+      margin-top: 10px;
+    }
+  }
+
+  &__price {
+    @media (min-width: 1024px) {
+      margin: 0;
+      padding-left: 20px;
+      width: 20%;
+      text-align: right;
+    }
+  }
+}
+
+.address {
+  @media (min-width: 1400px) {
+    width: 32%;
+    grid-gap: 18px;
+  }
+}
+
+.discount {
+  padding: 30px 20px 0;
+  display: none;
+  flex-direction: column;
+  &.active {
+    display: flex;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 43px 0 0;
+    flex-direction: row;
+  }
+
+  &__description {
+    padding: 18px;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: $color_white;
+    background: #209e53;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    span {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: 500;
+      color: $color_white;
+    }
+    @media (min-width: 1024px) {
+      width: 49%;
+      height: 105px;
+      &:not(:first-child) {
+        margin-top: 0;
+        margin-left: 20px;
+      }
+    }
+    @media (min-width: 1024px) {
+      font-size: 24px;
+      line-height: 28px;
+      span {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.popular,
+.recently,
+.promotional {
+  padding: 40px 0 40px;
+  @media (min-width: 1400px) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    @include container;
+    padding: 0;
+  }
+
+  &__heading {
+    @include container;
+    position: relative;
+    width: 100%;
+  }
+
+  &__heading-title {
+    @include font-primary( $font-size-m, $color_black, 500, 23px );
+    @media (min-width: 1400px) {
+      @include font-primary( $h3, $color_black, 500, 28px );
+    }
+  }
+
+  &__carousel {
+    padding: 27px 0 23px 10px;
+    display: flex;
+
+    &.active {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      padding: 27px 0 23px;
+    }
+    @media (min-width: 1400px) {
+      padding: 27px 0 25px;
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex !important;
+    justify-content: center;
+
+    @media (min-width: 1280px) {
+      &.active {
+        justify-content: flex-end;
+      }
+    }
+    @media (min-width: 1400px) {
+      &.active {
+        padding: 10px;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item-inner {
+    padding: 15px 10px;
+    width: 203px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_white;
+    box-shadow: 0 4px 15px rgba(128, 141, 156, 0.11);
+    @media (min-width: 1280px) {
+      width: 270px;
+    }
+    @media (min-width: 1400px) {
+      padding: 26px 15px;
+      width: 295px;
+    }
+  }
+
+  &__item-title {
+    @include font-primary( $font-size-m, $color_secondary, 500 );
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-l, $color_secondary, 500 );
+    }
+  }
+
+  &__item-link {
+    margin-top: 15px;
+    height: 118px;
+    @media (min-width: 1400px) {
+      height: 174px;
+    }
+  }
+
+  &__item-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__item-text {
+    margin-top: 10px;
+    text-align: center;
+    @include font-primary($font-size-base-mob, $color_black, normal, 17px);
+    @media (min-width: 1400px) {
+      margin-top: 27px;
+      @include font-primary(16px, $color_black, normal, 18px);
+    }
+  }
+
+  &__item-price {
+    margin-top: 10px;
+    @include font-primary($font-size-m-mob, $color_black, 500, 21px);
+    @media (min-width: 1400px) {
+      margin-top: 20px;
+      @include font-primary($font-size-s, $color_black, 500, 22px);
+    }
+  }
+}
+
+.promotional {
+  background: $color_athensGray;
+}

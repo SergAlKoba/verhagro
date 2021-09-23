@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  new WOW().init();
 
   //popular__carousel
 
@@ -9,7 +8,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       draggable: false,
       infinite: true,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 5000,
       cssEase: 'linear',
       variableWidth: false,
@@ -37,7 +36,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       draggable: false,
       infinite: true,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 5000,
       cssEase: 'linear',
       variableWidth: false,

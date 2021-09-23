@@ -10,144 +10,77 @@
   display: none;
   background: rgba(2, 2, 2, 0.6);
 
-  &__inner {
+  .inner {
     position: absolute;
+    top: 50%;
     left: 50%;
     margin: 0 auto;
-    padding: 30px 20px;
-    min-height: 100%;
+    padding: 20px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: $color_white;
     border: 2px solid $color_primary;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
   }
-
-  &__close {
-    &::before,
-    &::after {
-      background: $color_primary;
-    }
+  .title {
+    line-height: 20px;
   }
-
-  &__title {
-    text-align: center;
-  }
-
-  &__description {
-    margin: 6px auto 0;
-    max-width: 187px;
-    display: block;
-    text-align: center;
-    @media (min-width: 768px) {
-      margin-top: 15px;
-      max-width: none;
+  p {
+    @media (min-width: 1024px) {
+      margin-top: 27px;
       font-size: 18px;
+      line-height: 25px;
     }
   }
-
-  &__form {
-    margin-top: 30px;
+  .description {
+    display: block;
+    line-height: 20px;
+    font-weight: 500;
+    @media (min-width: 1024px) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  .form {
+    margin-top: 40px;
     width: 100%;
-    @media (min-width: 768px) {
-      margin-top: 40px;
+    @media (min-width: 1024px) {
+      margin-top: 0;
     }
   }
-
-  &__form-row {
-    @media (min-width: 768px) {
+  .form__row {
+    @media (min-width: 1024px) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
     }
   }
-
-  &__input {
+  .input {
     width: 100%;
   }
-
-  &__link {
-    display: block;
-    color: $color_primary;
-    &:hover {
-      text-decoration: underline;
-    }
+  .button {
+    min-width: 120px;
+    font-size: 16px;
   }
-
   &__action {
-    margin-top: 10px;
-    text-align: center;
+    margin-top: 20px;
   }
 }
 
-.modal__application {
-  .modal__inner {
-    top: 50%;
-    width: 275px;
-    min-height: auto;
-    transform: translate(-50%, -50%);
-    @media (min-width: 768px) {
-      padding: 38px 105px;
-      width: 612px;
-    }
-  }
-}
-
-.modal__inform {
-  .modal__inner {
-    top: 50%;
-    width: 275px;
-    min-height: auto;
-    transform: translate(-50%, -50%);
-
-    @media (min-width: 768px) {
-      padding: 38px 70px;
-      width: 506px;
-    }
-
-    .modal__action {
-      margin-top: 26px;
-    }
-  }
-}
-
-.modal__log-in {
-  .modal {
-    &__inner {
-      top: 50%;
-      max-width: 300px;
-      min-height: auto;
-      transform: translate(-50%, -50%);
-    }
-    &__form {
-      margin-top: 10px;
-      @media (min-width: 768px) {
-        margin-top: 20px;
-      }
-    }
-  }
-}
-
-.modal__registration {
-  .modal {
-    &__inner {
-      top: 50%;
-      max-width: 300px;
-      min-height: auto;
-      transform: translate(-50%, -50%);
-      @media (max-height: 590px) {
-        top: 0;
-        min-height: 100%;
-        transform: translate(-50%, 0%);
-      }
-    }
-    &__form {
-      margin-top: 10px;
-      @media (min-width: 768px) {
-        margin-top: 20px;
-      }
+.modal__review {
+  .inner {
+    @media (min-width: 1024px) {
+      padding: 35px 103px 35px 28px;
+      width: 926px;
+      display: grid;
+      grid-template-columns: 1fr 405px;
+      grid-gap: 25px;
     }
   }
 }

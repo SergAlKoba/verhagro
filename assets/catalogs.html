@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Каталоги</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
+  <link rel="stylesheet" href="css/catalogs.min.css" data-inprogress="">
+
+</head>
+
+
+<body class="page">
+
+  <!-- Основной контент -->
+
+  <div class="wrapper" id="wrapper">
+    <!-- Popup -->
+    <include src="assets/templates/popup.html"></include>
+
+    <!-- Header -->
+    <include src="assets/templates/header.html"></include>
+
+    <main class="main" id="main">
+
+      <!-- Секция Главный баннер -->
+      <section class="banner parallax-container" data-parallax-img="img/catalogs-banner.jpg" id="catalogs-banner">
+        <div class="banner__inner parallax-content">
+          <h1 class="banner__title">Каталоги</h1>
+        </div>
+      </section>
+
+      <div class="bread-crumbs">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li>/</li>
+          <li><span>Каталоги</span></li>
+        </ul>
+      </div>
+
+      <!-- Секция catalogs -->
+      <section class="catalogs" id="catalogs">
+        <div class="catalogs__inner">
+          <a href="catalog-page.html" class="catalogs__item fadeInUp wow">
+            <img src="img/img-22.jpg" class="catalogs__item-image" alt="">
+          </a>
+          <a href="catalog-page.html" class="catalogs__item fadeInUp wow">
+            <img src="img/img-23.jpg" class="catalogs__item-image" alt="">
+          </a>
+          <a href="catalog-page.html" class="catalogs__item fadeInUp wow">
+            <img src="img/img-24.jpg" class="catalogs__item-image" alt="">
+          </a>
+          <a href="catalog-page.html" class="catalogs__item fadeInUp wow">
+            <img src="img/img-25.jpg" class="catalogs__item-image" alt="">
+          </a>
+          <a href="catalog-page.html" class="catalogs__item fadeInUp wow">
+            <img src="img/img-26.jpg" class="catalogs__item-image" alt="">
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <include src="assets/templates/footer.html"></include>
+
+  </div>
+
+  <!-- Скрипты -->
+  <script src="js/core.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/contacts.min.js"></script>
+</body>
+
+</html>

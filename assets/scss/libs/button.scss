@@ -71,6 +71,25 @@
   &:hover {
     color: $color_white;
     background-color: $color_primary;
+    border-color: $color_primary;
+  }
+
+  &.button--arrow:hover::after {
+    background-image: url(../img/arrow.svg);
+  }
+}
+
+.button--lightin {
+  min-width: 249px;
+  height: 50px;
+  background-color: $color_white;
+  border-color: $color_white;
+  @include font-primary( $font-size-xs-mob, $color_primary, 400 );
+
+  &:hover {
+    color: $color_white;
+    background-color: $color_primary;
+    border-color: $color_primary;
   }
 
   &.button--arrow:hover::after {
@@ -102,7 +121,9 @@
   }
 }
 
-.slick-arrow {
+.slick-arrow,
+.nav-next,
+.nav-prev {
   position: absolute;
   z-index: 100;
   top: 50%;
@@ -130,7 +151,8 @@
   }
 }
 
-.slick-prev {
+.slick-prev,
+.nav-prev {
   top: 50%;
   &:before {
     top: 50%;
@@ -143,7 +165,8 @@
   }
 }
 
-.slick-next {
+.slick-next,
+.nav-next {
   right: 0;
   left: auto;
   &:before {
@@ -190,12 +213,50 @@
   }
 }
 
+.nav-prev,
+.nav-next {
+  width: 22px;
+  height: 22px;
+  &::before {
+    width: 5px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translate(-55%, -50%);
+  }
+}
+
+.nav-next {
+  &::before {
+    transform: translate(-45%, -50%);
+  }
+}
+
+.navigation {
+  position: relative;
+  padding: 0 20px;
+
+  .nav-links {
+    padding: 0 20px;
+  }
+
+  .page-numbers {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .current {
+    margin: 0;
+  }
+}
+
 /* ToTop Button */
 .ui-to-top {
   position: fixed;
-  z-index: 1;
-  right: 15px;
-  bottom: 15px;
+  z-index: 100;
+  right: 20px;
+  bottom: 20px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -227,5 +288,31 @@
   .ui-to-top {
     right: 40px;
     bottom: 40px;
+  }
+}
+
+//Хлебные крошки
+.bread-crumbs {
+  @include container;
+  margin-top: 20px;
+  @media (min-width: 480px) {
+    margin-top: 40px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    white-space: nowrap;
+    &:hover {
+      color: $color_primary;
+    }
+  }
+  li:nth-of-type(2n) {
+    padding: 0 5px;
+    display: block;
+  }
+  span {
+    white-space: nowrap;
   }
 }

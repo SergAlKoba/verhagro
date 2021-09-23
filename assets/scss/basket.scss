@@ -1,0 +1,349 @@
+@import 'libs/variables';
+@import 'libs/mixins';
+@import 'libs/form';
+@import 'slick.min.css';
+
+.banner {
+  height: 140px;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 1680px) {
+    height: 293px;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    @include container;
+  }
+
+  &__title {
+    text-transform: none;
+    color: $color_white;
+  }
+}
+
+.basket {
+  .number {
+    margin-top: 20px;
+    @media (min-width: 480px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+  }
+
+  .close {
+    top: 8px;
+    right: 0;
+    @media (min-width: 1400px) {
+      top: 24px;
+    }
+  }
+
+  &__form {
+    @include container;
+    @media (min-width: 1400px) {
+      margin-top: 10px;
+    }
+  }
+
+  li {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid $color_silver;
+
+    @media (min-width: 480px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 20px 36px 20px 0;
+      grid-template-columns: 1fr 1fr 340px;
+    }
+    @media (min-width: 1400px) {
+      grid-template-columns: 190px 369px 531px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    width: 131px;
+    display: flex;
+    @media (min-width: 480px) {
+      width: 100%;
+    }
+    @media (min-width: 1400px) {
+      max-width: 190px;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    .button {
+      margin-top: 8px;
+      width: fit-content;
+      min-width: 190px;
+      font-size: 16px;
+    }
+    @media (min-width: 480px) {
+      margin-top: 0;
+      padding-right: 25px;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 9px;
+    }
+    @media (min-width: 1400px) {
+      margin: 5px 0 0;
+      padding-right: 65px;
+      .button {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__title {
+    text-decoration: underline;
+    color: $color_black;
+    &:hover {
+      color: $color_primary;
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    span {
+      display: block;
+      font-size: 12px;
+      line-height: 14px;
+      color: #535c67;
+      @media (min-width: 1400px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__total {
+    @media (min-width: 1024px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__price {
+    margin-top: 25px;
+    display: block;
+    @media (min-width: 480px) {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__result {
+    padding: 13px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__sum {
+    margin-top: 31px;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    @media (min-width: 1400px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    span {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      @media (min-width: 1400px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__discount {
+    margin-top: 10px;
+    display: block;
+    color: $color_primary;
+    span {
+      color: $color_black;
+    }
+  }
+
+  &__action {
+    margin-top: 24px;
+    padding-top: 30px;
+    border-top: 2px solid #dadde9;
+    @media (min-width: 480px) {
+      margin-top: 31px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .button--border {
+      min-width: 192px;
+      font-size: 16px;
+    }
+    .button--arrow {
+      margin-top: 19px;
+      min-width: 190px;
+      @media (min-width: 480px) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.popular,
+.recently,
+.promotional {
+  padding: 40px 0 40px;
+  @media (min-width: 1400px) {
+    padding: 60px 0 92px;
+  }
+
+  &__inner {
+    @include container;
+    padding: 0;
+  }
+
+  &__heading {
+    @include container;
+    position: relative;
+    width: 100%;
+  }
+
+  &__heading-title {
+    @include font-primary( $font-size-m, $color_black, 500, 23px );
+    @media (min-width: 1400px) {
+      @include font-primary( $h3, $color_black, 500, 28px );
+    }
+  }
+
+  &__carousel {
+    padding: 27px 0 23px 10px;
+    display: flex;
+
+    &.active {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      padding: 27px 0 23px;
+    }
+    @media (min-width: 1400px) {
+      padding: 27px 0 25px;
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex !important;
+    justify-content: center;
+
+    @media (min-width: 1280px) {
+      &.active {
+        justify-content: flex-end;
+      }
+    }
+    @media (min-width: 1400px) {
+      &.active {
+        padding: 10px;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item-inner {
+    padding: 15px 10px;
+    width: 203px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_white;
+    box-shadow: 0 4px 15px rgba(128, 141, 156, 0.11);
+    @media (min-width: 1280px) {
+      width: 270px;
+    }
+    @media (min-width: 1400px) {
+      padding: 26px 15px;
+      width: 295px;
+    }
+  }
+
+  &__item-title {
+    @include font-primary( $font-size-m, $color_secondary, 500 );
+    @media (min-width: 1400px) {
+      @include font-primary( $font-size-l, $color_secondary, 500 );
+    }
+  }
+
+  &__item-link {
+    margin-top: 15px;
+    height: 118px;
+    @media (min-width: 1400px) {
+      height: 174px;
+    }
+  }
+
+  &__item-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__item-text {
+    margin-top: 10px;
+    text-align: center;
+    @include font-primary($font-size-base-mob, $color_black, normal, 17px);
+    @media (min-width: 1400px) {
+      margin-top: 27px;
+      @include font-primary(16px, $color_black, normal, 18px);
+    }
+  }
+
+  &__item-price {
+    margin-top: 10px;
+    @include font-primary($font-size-m-mob, $color_black, 500, 21px);
+    @media (min-width: 1400px) {
+      margin-top: 20px;
+      @include font-primary($font-size-s, $color_black, 500, 22px);
+    }
+  }
+}
+
+.promotional {
+  background: $color_athensGray;
+}
