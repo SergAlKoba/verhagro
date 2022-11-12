@@ -179,21 +179,24 @@
     }
 
     .instagram {
-      background: no-repeat url(../img/insta-header.svg) 50% 50%;
+      background: no-repeat url(../img/new_instagram.png) 50% 50%;
+      background-size: cover;
       &:hover {
-        background: no-repeat $color_primary url(../img/instagram.svg) 50% 50%;
+        // background: no-repeat $color_primary url(../img/instagram.svg) 50% 50%;
       }
     }
     .facebook {
-      background: no-repeat url(../img/facebook-header.svg) 50% 50%;
+      background: no-repeat url(../img/new_facebook.png) 50% 50%;
+      background-size: cover;
       &:hover {
-        background: no-repeat $color_primary url(../img/facebooke.svg) 50% 50%;
+        // background: no-repeat $color_primary url(../img/facebooke.svg) 50% 50%;
       }
     }
     .vk {
-      background: no-repeat url(../img/vk-header.svg) 50% 50%;
+      background: no-repeat url(../img/new_youtube.png) 50% 50%;
+      background-size: cover;
       &:hover {
-        background: no-repeat $color_primary url(../img/vk.svg) 50% 50%;
+        // background: no-repeat $color_primary url(../img/vk.svg) 50% 50%;
       }
     }
   }

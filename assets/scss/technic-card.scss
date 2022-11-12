@@ -278,6 +278,7 @@
   &__item-inner {
     padding: 12px 13px;
     display: flex;
+    text-align: center;
     flex-direction: column;
     border: 2px solid $color_silver;
     border-top: none;
@@ -300,6 +301,8 @@
     height: 179px;
     object-fit: cover;
     object-position: center;
+    border: 2px solid $color_silver;
+    border-bottom: none;
     @media (min-width: 480px) {
       height: 257px;
     }
@@ -805,6 +808,7 @@
     margin: 0 10px;
     padding: 24px 10px 15px;
     width: 205px;
+    position: relative;
     display: flex !important;
     flex-direction: column;
     align-items: center;

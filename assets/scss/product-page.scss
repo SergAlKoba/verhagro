@@ -122,13 +122,24 @@
     }
   }
   li {
-    margin-bottom: 5px;
     font-size: 16px;
+    margin-bottom: 5px;
     line-height: 20px;
     color: $color_white;
+    span{
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      color: $color_white;
+      position: relative;
+    }
     @media (min-width: 1400px) {
       font-size: 20px;
       line-height: 25px;
+      span{
+        font-size: 24px;
+        line-height: 30px;
+      }
     }
     del {
       text-decoration: line-through;
@@ -555,6 +566,7 @@
   &__item-inner {
     padding: 15px 10px;
     width: 203px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;

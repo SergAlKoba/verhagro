@@ -497,9 +497,10 @@
   }
 
   &__item-inner {
-    padding: 15px 10px;
     width: 203px;
     display: flex;
+    padding: 15px 10px;
+    position: relative;
     flex-direction: column;
     align-items: center;
     background-color: $color_white;

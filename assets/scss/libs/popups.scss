@@ -92,3 +92,54 @@
 .showing-modal {
   overflow: hidden;
 }
+
+
+.modal__put{
+  h4{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    span{
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    li{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .inner{
+      width: 500px;
+      padding: 40px;
+    }
+    h4 {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+      span{
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    ul{
+      display: flex;
+      margin: 0 -10px;
+      flex-direction: row;
+      li{
+        margin: 0 10px;
+      }
+    }
+  }
+}
