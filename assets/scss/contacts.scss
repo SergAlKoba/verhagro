@@ -209,20 +209,20 @@
   }
 
   &__name {
-    position: relative;
     width: 100%;
     display: block;
+    position: relative;
     text-transform: none;
     @include font-primary( $font-size-m, $color_white, 500, 32px );
-    &:before {
-      content: '';
-      position: absolute;
-      top: 6px;
-      right: 0;
-      width: 20px;
-      height: 20px;
-      background: center/contain no-repeat url(../img/arrow-top.svg);
-    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 6px;
+    //   right: 0;
+    //   width: 20px;
+    //   height: 20px;
+    //   background: center/contain no-repeat url(../img/arrow-top.svg);
+    // }
     &.active::before {
       transform: rotate(180deg);
     }
@@ -233,18 +233,18 @@
   }
   &__information {
     overflow: hidden;
-    max-height: 0;
+    // max-height: 0;
     transition: max-height 0.2s ease-out;
     @include font-primary( $font-size-xs-mob, $color_white, 400, 20px );
   }
 
   &__text {
-    margin-top: 30px;
-    margin-bottom: 22px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     @include font-primary( $font-size-xs-mob, $color_white, 400, 20px );
     @media (min-width: 1280px) {
-      margin-top: 30px;
-      margin-bottom: 27px;
+      margin-top: 10px;
+      margin-bottom: 15px;
       @include font-primary( $font-size-xs, $color_white, 400, 25px );
     }
   }
